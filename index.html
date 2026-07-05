@@ -13,6 +13,16 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="/hc-design.css">
+  <style>
+    .mainGrid { display: grid; grid-template-columns: 1fr 280px; gap: 32px; margin: 48px 0; }
+    .sidebar { position: sticky; top: 20px; height: fit-content; }
+    .sectionHeader { margin-bottom: 24px; }
+    .sectionTitle { margin: 0 0 8px 0; border-bottom: 2px solid var(--color-border-soft); padding-bottom: 12px; }
+    .meta { margin: 0; color: var(--color-text-light); }
+    .contentGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+    .categoryGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    @media (max-width: 768px) { .mainGrid { grid-template-columns: 1fr; } .sidebar { position: static; } .categoryGrid { grid-template-columns: repeat(2, 1fr); } }
+  </style>
 </head>
 <body>
   <div class="shell">
@@ -20,9 +30,10 @@
       <div class="wrap">
         <div class="brand">NewsFixd<small>AI-powered news, delivered daily</small></div>
         <nav class="nav">
-          <a href="#top">Top</a>
-          <a href="#latest">Latest</a>
-          <a href="#hubs">Hubs</a>
+          <a href="#top">Home</a>
+          <a href="/business/index.html">Business hub</a>
+<a href="/markets/index.html">Markets hub</a>
+<a href="/tech/index.html">Tech hub</a>
           <a href="#newsletter">Subscribe</a>
         </nav>
       </div>
@@ -40,74 +51,101 @@
       </section>
 
 
-      <section class="section" id="latest">
-        <div class="sectionHeader">
-          <div>
-            <p class="eyebrow">Latest / start here</p>
-            <h2 class="sectionTitle">A stronger page map for organic traffic and retention</h2>
+      <div class="mainGrid">
+        <div>
+          <!-- FEATURED STORIES CAROUSEL -->
+          <section id="featured">
+            <div class="sectionHeader">
+              <h2 class="sectionTitle">Top Stories</h2>
+              <p class="meta">Latest coverage and in-depth analysis</p>
+            </div>
+            <div class="contentGrid">
+              
+              <article class="card">
+                <h4 style="margin-top: 0;">AI search is changing how business news gets discovered</h4>
+                <p style="margin-bottom: 0;">A practical look at how newsroom SEO should evolve around answer engines, internal links, and topic hubs.</p>
+              </article>
+
+              <article class="card">
+                <h4 style="margin-top: 0;">Tools that help businesses stay organized</h4>
+                <p style="margin-bottom: 0;">Explore CRM, email, and workflow tools that improve efficiency.</p>
+              </article>
+
+              <article class="card">
+                <h4 style="margin-top: 0;">What readers want from a business hub in 2026</h4>
+                <p style="margin-bottom: 0;">A simple structure that keeps readers scrolling from headline to newsletter signup.</p>
+              </article>
+            </div>
+          </section>
+
+          <!-- CATEGORY HUBS -->
+          <section id="hubs">
+            <div class="sectionHeader">
+              <h2 class="sectionTitle">business, tech, markets, and money pages</h2>
+              <p class="meta">Organized by topic for easy browsing</p>
+            </div>
+            <div class="categoryGrid">
+              
+              <a href="./business/index.html" class="card" style="text-decoration: none; color: inherit;">
+                <h4 style="margin-top: 0; margin-bottom: 8px;">Business</h4>
+                <p style="margin: 0; font-size: 12px; color: var(--color-text-light);">Company moves, layoffs, AI tooling, and business software angles that readers can actually use.</p>
+              </a>
+
+              <a href="./markets/index.html" class="card" style="text-decoration: none; color: inherit;">
+                <h4 style="margin-top: 0; margin-bottom: 8px;">Markets</h4>
+                <p style="margin: 0; font-size: 12px; color: var(--color-text-light);">Rates, inflation, stocks, crypto, and the stories people revisit when money gets tight.</p>
+              </a>
+
+              <a href="./tech/index.html" class="card" style="text-decoration: none; color: inherit;">
+                <h4 style="margin-top: 0; margin-bottom: 8px;">Tech</h4>
+                <p style="margin: 0; font-size: 12px; color: var(--color-text-light);">AI launches, software updates, creator tools, and product stories that can feed the rest of the network.</p>
+              </a>
+            </div>
+          </section>
+
+          <!-- NEWSLETTER -->
+          <section id="newsletter" style="background: var(--color-cream-200); padding: 32px; border-radius: 8px; text-align: center; margin-top: 48px;">
+            <h2 class="sectionTitle" style="border: none; padding: 0; margin: 0 0 12px 0;">Get the latest delivered</h2>
+            <p class="meta">Daily news, analysis, and insights</p>
+            <div style="display: flex; gap: 8px; max-width: 400px; margin: 20px auto;">
+              <input type="email" placeholder="Enter your email" style="flex: 1; padding: 10px; border: 1px solid var(--color-border-soft); border-radius: 4px;" />
+              <button class="btn btn-primary" style="white-space: nowrap; padding: 10px 16px;">Subscribe</button>
+            </div>
+          </section>
+        </div>
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+          <!-- POPULAR NOW -->
+          <div class="card">
+            <p class="eyebrow">Popular Now</p>
+            <h4 style="margin: 0 0 16px 0; font-size: 14px;">Most Read</h4>
+            
+            <div style="margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--color-border-soft);">
+              <span class="badge" style="font-size: 10px; margin-bottom: 4px;">1</span>
+              <div style="font-size: 13px; font-weight: 600; line-height: 1.4;">AI search is changing how business news gets discovered</div>
+            </div>
+
+            <div style="margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--color-border-soft);">
+              <span class="badge" style="font-size: 10px; margin-bottom: 4px;">2</span>
+              <div style="font-size: 13px; font-weight: 600; line-height: 1.4;">Tools that help businesses stay organized</div>
+            </div>
+
+            <div style="margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--color-border-soft);">
+              <span class="badge" style="font-size: 10px; margin-bottom: 4px;">3</span>
+              <div style="font-size: 13px; font-weight: 600; line-height: 1.4;">What readers want from a business hub in 2026</div>
+            </div>
           </div>
-          <p class="meta">Each hub below is a real landing page, not a dead-end teaser.</p>
-        </div>
-        <div class="threeCol">
-          
-          <article class="miniCard">
-            <h4><a href="/business/index.html">Business hub</a></h4>
-            <p>Open the business hub and move deeper into the content cluster.</p>
-          </article>
 
-          <article class="miniCard">
-            <h4><a href="/markets/index.html">Markets hub</a></h4>
-            <p>Open the markets hub and move deeper into the content cluster.</p>
-          </article>
-
-          <article class="miniCard">
-            <h4><a href="/tech/index.html">Tech hub</a></h4>
-            <p>Open the tech hub and move deeper into the content cluster.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section" id="hubs">
-        <div class="sectionHeader">
-          <div>
-            <p class="eyebrow">business, tech, markets, and money pages</p>
-            <h2 class="sectionTitle">Built to keep readers in the loop</h2>
+          <!-- FEATURED HUB -->
+          <div class="card">
+            <p class="eyebrow">Featured Hub</p>
+            <h4 style="margin: 0 0 8px 0;">Business</h4>
+            <p style="margin: 0 0 12px 0; font-size: 12px; color: var(--color-text-light);">Company moves, layoffs, AI tooling, and business software angles that readers can actually use.</p>
+            <a href="./business/index.html" class="btn btn-primary" style="width: 100%; display: block; text-align: center; text-decoration: none;">Explore</a>
           </div>
-          <p class="meta">The main job is repeatable traffic, not random clicks.</p>
-        </div>
-        <div class="threeCol">
-          
-          <article class="miniCard">
-            <h4><a href="./business/index.html">Business</a></h4>
-            <p>Company moves, layoffs, AI tooling, and business software angles that readers can actually use.</p>
-          </article>
-
-          <article class="miniCard">
-            <h4><a href="./markets/index.html">Markets</a></h4>
-            <p>Rates, inflation, stocks, crypto, and the stories people revisit when money gets tight.</p>
-          </article>
-
-          <article class="miniCard">
-            <h4><a href="./tech/index.html">Tech</a></h4>
-            <p>AI launches, software updates, creator tools, and product stories that can feed the rest of the network.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section" id="newsletter">
-        <div class="sectionHeader">
-          <div>
-            <p class="eyebrow">Subscribe</p>
-            <h2 class="sectionTitle">Turn readers into a list</h2>
-          </div>
-          <p class="meta">Segment by topic so the CRM can follow up with the right offers.</p>
-        </div>
-        <div class="twoCol">
-          <article class="miniCard">
-            <h4>Email capture</h4>
-            <p>Use the form in the live product to gather topic preferences, not just addresses.</p>
-          </article>
-        </div>
+        </aside>
+      </div>
       </section>
     </main>
   </div>
