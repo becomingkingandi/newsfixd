@@ -1,0 +1,51 @@
+{
+  "currency": "USD",
+  "inventory": [
+    {
+      "id": "feed-native-01",
+      "format": "native-feed",
+      "location": "homepage after lead package",
+      "pricingModel": "flat-weekly",
+      "startingPrice": 750,
+      "status": "available"
+    },
+    {
+      "id": "article-mid-01",
+      "format": "in-article",
+      "location": "after fourth paragraph",
+      "pricingModel": "cpm",
+      "startingPrice": 18,
+      "status": "available"
+    },
+    {
+      "id": "newsletter-primary-01",
+      "format": "newsletter-primary",
+      "location": "daily briefing after lead item",
+      "pricingModel": "flat-send",
+      "startingPrice": 500,
+      "status": "available"
+    },
+    {
+      "id": "local-business-spotlight-01",
+      "format": "sponsored-profile",
+      "location": "local channel",
+      "pricingModel": "flat-package",
+      "startingPrice": 1200,
+      "status": "available"
+    }
+  ],
+  "affiliatePolicy": {
+    "disclosureRequired": true,
+    "allowedCategories": [
+      "business software",
+      "books",
+      "events",
+      "local services"
+    ],
+    "prohibited": [
+      "undisclosed endorsements",
+      "pay-to-play editorial ranking",
+      "misleading health or financial claims"
+    ]
+  }
+}

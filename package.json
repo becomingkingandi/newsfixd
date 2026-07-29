@@ -1,0 +1,11 @@
+{
+  "name": "newsfixd",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "pipeline:ingest": "node pipeline/pipeline.mjs ingest",
+    "pipeline:list": "node pipeline/pipeline.mjs list",
+    "pipeline:report": "node pipeline/pipeline.mjs report",
+    "check": "node --check app.js && node --check pipeline/pipeline.mjs"
+  }
+}
