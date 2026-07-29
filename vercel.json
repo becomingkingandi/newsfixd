@@ -1,6 +1,58 @@
 {
   "cleanUrls": true,
   "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/home-feed.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/home-feed",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/tech-news.html",
+      "destination": "/tech/",
+      "permanent": true
+    },
+    {
+      "source": "/tech-news",
+      "destination": "/tech/",
+      "permanent": true
+    },
+    {
+      "source": "/article-view.html",
+      "destination": "/article/",
+      "permanent": true
+    },
+    {
+      "source": "/article-view",
+      "destination": "/article/",
+      "permanent": true
+    },
+    {
+      "source": "/search-results.html",
+      "destination": "/search/",
+      "permanent": true
+    },
+    {
+      "source": "/search-results",
+      "destination": "/search/",
+      "permanent": true
+    },
+    {
+      "source": "/ai",
+      "destination": "/tech/",
+      "permanent": true
+    },
+    {
+      "source": "/ai/",
+      "destination": "/tech/",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
