@@ -1,114 +1,355 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Money — NewsFixd</title>
-  <meta name="description" content="Maya cleared $43K in 30 days. Revenue per fan, top spender breakdown, scaling from 1 to 10 AI personas. The business numbers on autonomous income.">
-  <link rel="canonical" href="https://newsfixd.com/money/">
-  <meta property="og:title" content="Money — NewsFixd">
-  <meta property="og:description" content="Maya cleared $43K in 30 days. The business numbers on AI persona revenue.">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="/styles.css">
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Business | NewsFixd</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Plus Jakarta Sans (UI) & JetBrains Mono -->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error-container": "#ffdad6",
+                    "secondary-fixed-dim": "#c8c5ca",
+                    "surface-dim": "#d9d9e5",
+                    "tertiary-fixed": "#ffdbcd",
+                    "on-secondary-fixed": "#1b1b1e",
+                    "primary-container": "#2563eb",
+                    "on-primary": "#ffffff",
+                    "outline-variant": "#c3c6d7",
+                    "canvas-white": "#F9FAFB",
+                    "tertiary-fixed-dim": "#ffb596",
+                    "on-surface-variant": "#434655",
+                    "secondary-container": "#e4e1e6",
+                    "surface-container": "#ededf9",
+                    "primary": "#004ac6",
+                    "on-error": "#ffffff",
+                    "on-tertiary-fixed": "#360f00",
+                    "on-primary-fixed": "#00174b",
+                    "tertiary-container": "#bc4800",
+                    "muted-steel": "#71717A",
+                    "background": "#faf8ff",
+                    "error": "#ba1a1a",
+                    "primary-fixed-dim": "#b4c5ff",
+                    "inverse-on-surface": "#f0f0fb",
+                    "inverse-primary": "#b4c5ff",
+                    "on-tertiary-fixed-variant": "#7d2d00",
+                    "surface-tint": "#0053db",
+                    "on-secondary": "#ffffff",
+                    "tertiary": "#943700",
+                    "secondary": "#5f5e61",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-container": "#ffede6",
+                    "on-background": "#191b23",
+                    "on-primary-fixed-variant": "#003ea8",
+                    "surface-variant": "#e1e2ed",
+                    "surface-container-lowest": "#ffffff",
+                    "pure-surface": "#FFFFFF",
+                    "inverse-surface": "#2e3039",
+                    "surface": "#faf8ff",
+                    "on-tertiary": "#ffffff",
+                    "primary-fixed": "#dbe1ff",
+                    "secondary-fixed": "#e4e1e6",
+                    "on-secondary-container": "#656467",
+                    "surface-container-highest": "#e1e2ed",
+                    "whisper-border": "rgba(226, 232, 240, 0.5)",
+                    "surface-bright": "#faf8ff",
+                    "on-surface": "#191b23",
+                    "outline": "#737686",
+                    "on-secondary-fixed-variant": "#47464a",
+                    "surface-container-high": "#e7e7f3",
+                    "on-primary-container": "#eeefff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "2.5rem",
+                    "gutter": "1.5rem",
+                    "reading-column": "720px",
+                    "max-width": "1280px",
+                    "margin-mobile": "1rem"
+            },
+            "fontFamily": {
+                    "label-mono": ["JetBrains Mono"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "headline-xl": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "headline-xl-mobile": ["Plus Jakarta Sans"],
+                    "headline-md": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "label-mono": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-xl": ["56px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-xl-mobile": ["40px", {"lineHeight": "1.1", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            vertical-align: middle;
+        }
+        .staggered-grid-item:nth-child(even) {
+            margin-top: 2rem;
+        }
+        @media (max-width: 768px) {
+            .staggered-grid-item:nth-child(even) {
+                margin-top: 0;
+            }
+        }
+        .whisper-card {
+            background: #FFFFFF;
+            border: 1px solid rgba(226, 232, 240, 0.5);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .whisper-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px -10px rgba(0, 74, 198, 0.08);
+        }
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
-<body>
-  <div class="shell">
-    <header class="topbar">
-      <div class="wrap">
-        <div class="brand">NewsFixd<small>ai personas · money · tax</small></div>
-        <nav class="nav">
-          <a href="../index.html">Home</a>
-          <a href="../index.html#latest">Latest</a>
-          <a href="../index.html#newsletter">Subscribe</a>
-        </nav>
-      </div>
-    </header>
-    <main class="wrap">
-      <section class="hero">
-        <p class="eyebrow">Revenue breakdown</p>
-        <h1>$43K in 30 days. Zero employees.</h1>
-        <p class="lede">One AI persona. 1,247 subscribers. $43,000 gross. No filming, no editing, no DMs typed by hand. The business model behind the Maya story — and how to scale it to $430K/month.</p>
-        <div class="heroActions">
-          <a class="button primary" href="#model">The business model</a>
-          <a class="button" href="../tax/">Tax strategy</a>
-        </div>
-      </section>
-
-      <section class="grid" id="model">
-        <article class="card cardPad">
-          <p class="eyebrow">Unit economics</p>
-          <div class="list">
-
-            <div class="item">
-              <h3>Revenue per fan: $34/month</h3>
-              <p>Base subscription is $12.99. The rest comes from tips, PPV content, and premium DMs. Average fan spends 2.6× the base subscription. The top 10% of fans spend 13× the base.</p>
+<body class="bg-canvas-white text-on-background font-body-md text-body-md smooth-scroll">
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-canvas-white dark:bg-on-background border-b border-whisper-border">
+<nav class="flex justify-between items-center w-full px-margin-desktop py-6 max-w-max-width mx-auto">
+<div class="font-headline-md text-headline-md text-on-background dark:text-surface-bright tracking-tighter uppercase font-extrabold">
+                NewsFixd
             </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-muted-steel dark:text-outline-variant pb-1 hover:text-primary transition-colors duration-300 font-label-mono text-label-mono" href="/global/">Global</a>
+<a class="text-muted-steel dark:text-outline-variant pb-1 hover:text-primary transition-colors duration-300 font-label-mono text-label-mono" href="/politics/">Politics</a>
+<a class="text-muted-steel dark:text-outline-variant pb-1 hover:text-primary transition-colors duration-300 font-label-mono text-label-mono" href="/tech/">Tech</a>
+<a class="text-muted-steel dark:text-outline-variant pb-1 hover:text-primary transition-colors duration-300 font-label-mono text-label-mono" href="#">Culture</a>
+<a class="text-primary dark:text-primary-fixed border-b-2 border-primary pb-1 font-label-mono text-label-mono" href="/business/">Business</a>
+<a class="text-muted-steel dark:text-outline-variant pb-1 hover:text-primary transition-colors duration-300 font-label-mono text-label-mono" href="/science/">Science</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-surface-container transition-colors duration-200">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</nav>
+</header>
+<main class="pt-32 pb-20 max-w-max-width mx-auto px-margin-desktop">
+<!-- Market Ticker Micro-interaction -->
+<section class="mb-12 overflow-hidden border-y border-whisper-border py-4 bg-pure-surface">
+<div class="flex whitespace-nowrap animate-marquee">
+<div class="flex items-center gap-12 pr-12">
+<span class="flex items-center gap-2"><span class="font-label-mono text-label-mono text-muted-steel">NASDAQ</span> <span class="font-bold text-primary">16,274.94 +1.14%</span></span>
+<span class="flex items-center gap-2"><span class="font-label-mono text-label-mono text-muted-steel">S&amp;P 500</span> <span class="font-bold text-primary">5,243.77 +0.82%</span></span>
+<span class="flex items-center gap-2"><span class="font-label-mono text-label-mono text-muted-steel">FTSE 100</span> <span class="font-bold text-error">7,935.09 -0.22%</span></span>
+<span class="flex items-center gap-2"><span class="font-label-mono text-label-mono text-muted-steel">BTC/USD</span> <span class="font-bold text-primary">$69,420.00 +2.45%</span></span>
+<span class="flex items-center gap-2"><span class="font-label-mono text-label-mono text-muted-steel">GOLD</span> <span class="font-bold text-primary">$2,345.10 +0.12%</span></span>
+</div>
+<div aria-hidden="true" class="flex items-center gap-12 pr-12">
+<span class="flex items-center gap-2"><span class="font-label-mono text-label-mono text-muted-steel">NASDAQ</span> <span class="font-bold text-primary">16,274.94 +1.14%</span></span>
+<span class="flex items-center gap-2"><span class="font-label-mono text-label-mono text-muted-steel">S&amp;P 500</span> <span class="font-bold text-primary">5,243.77 +0.82%</span></span>
+<span class="flex items-center gap-2"><span class="font-label-mono text-label-mono text-muted-steel">FTSE 100</span> <span class="font-bold text-error">7,935.09 -0.22%</span></span>
+<span class="flex items-center gap-2"><span class="font-label-mono text-label-mono text-muted-steel">BTC/USD</span> <span class="font-bold text-primary">$69,420.00 +2.45%</span></span>
+<span class="flex items-center gap-2"><span class="font-label-mono text-label-mono text-muted-steel">GOLD</span> <span class="font-bold text-primary">$2,345.10 +0.12%</span></span>
+</div>
+</div>
+</section>
+<!-- Asymmetric Hero Section -->
+<section class="grid grid-cols-12 gap-gutter mb-24 items-start">
+<div class="col-span-12 md:col-span-8 group cursor-pointer">
+<div class="overflow-hidden rounded-xl mb-6 bg-surface-container">
+<img class="w-full aspect-[16/7] object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A cinematic wide-angle photograph of a modern glass-walled boardroom overlooking a futuristic metropolitan skyline at twilight. The lighting is low-key with cool blue ambient tones and sharp highlights on a mahogany table. The scene conveys a sense of high-stakes corporate strategy and global economic power in a minimal, professional aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0ZDjfLdnlN2XDwAyAHYzM35VaMRSPTAuXpA9pgS6EpG1q3_rFTkYCGU8SicVwInOQhlWol4oaSlI3Uor6GJvftZqq2Syal-yEIPZfwlrZ-svb8ttndySOOHOsOiHlRigbBPFDodcptQ4uGm95Z_katRvawjnUoPn0IvYaMqFvh4RJ_wrFNq_V_nNkGZmESbjGBQNert42v9GztlQCWWMKyvmNSuAeY-R18x7NBAa7GMZ_P2Ag4r_5"/>
+</div>
+<div class="flex gap-4 mb-4">
+<span class="px-3 py-1 border border-primary text-primary font-label-mono text-label-mono rounded-full uppercase tracking-widest">Market Shift</span>
+<span class="text-muted-steel font-label-mono text-label-mono flex items-center gap-2"><span class="material-symbols-outlined text-[14px]" data-icon="schedule">schedule</span> 12 Min Read</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl md:text-headline-xl text-on-background mb-6 leading-[1.05]">The Great Recalibration: How Geopolitics is Redrawing Global Supply Chains</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl">A deep dive into the emerging 'Near-shoring' trend and why the world’s largest manufacturing hubs are moving closer to home than ever before.</p>
+</div>
+<div class="col-span-12 md:col-span-4 flex flex-col gap-12 pt-4">
+<div class="border-l-2 border-primary pl-6 hover:translate-x-1 transition-transform duration-300 cursor-pointer">
+<span class="font-label-mono text-label-mono text-primary uppercase mb-2 block tracking-widest">Tech X Business</span>
+<h3 class="font-headline-md text-headline-md mb-3">AI's Productivity Paradox: Why Profits Haven't Peaked Yet</h3>
+<p class="text-muted-steel text-sm leading-relaxed">Financial analysts weigh the massive R&amp;D spending against the delayed output of generative intelligence.</p>
+</div>
+<div class="border-l-2 border-whisper-border pl-6 hover:border-primary transition-colors duration-300 cursor-pointer">
+<span class="font-label-mono text-label-mono text-muted-steel uppercase mb-2 block tracking-widest">Financial Reports</span>
+<h3 class="font-headline-md text-headline-md mb-3">Quarterly Forecast: The Return of Value Investing</h3>
+<p class="text-muted-steel text-sm leading-relaxed">After a decade of growth dominance, the market's oldest philosophy finds new life in high-interest climates.</p>
+</div>
+<div class="border-l-2 border-whisper-border pl-6 hover:border-primary transition-colors duration-300 cursor-pointer">
+<span class="font-label-mono text-label-mono text-muted-steel uppercase mb-2 block tracking-widest">Executive Series</span>
+<h3 class="font-headline-md text-headline-md mb-3">Interview: Sarah Chen on the Future of Neo-Banking</h3>
+<p class="text-muted-steel text-sm leading-relaxed">The CEO of Nexus Global discusses regulatory shifts and the death of traditional branch banking.</p>
+</div>
+</div>
+</section>
+<!-- Bento Grid for Trends -->
+<section class="mb-32">
+<div class="flex items-end justify-between mb-12">
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-2">Emerging Trends</h2>
+<div class="h-1 w-24 bg-primary"></div>
+</div>
+<button class="group flex items-center gap-2 font-label-mono text-label-mono text-primary uppercase tracking-widest hover:gap-4 transition-all duration-300">
+                    View Archive <span class="material-symbols-outlined" data-icon="east">east</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Large Feature Card -->
+<div class="md:col-span-2 whisper-card rounded-xl overflow-hidden p-8 flex flex-col justify-between min-h-[400px]">
+<div class="max-w-md">
+<span class="bg-primary text-on-primary px-3 py-1 font-label-mono text-label-mono rounded-sm mb-6 inline-block">Exclusive Report</span>
+<h2 class="font-headline-lg text-headline-lg mb-4 text-on-background">The Lithium Land Rush: Australia's Strategic Advantage</h2>
+<p class="text-on-surface-variant mb-8">How a surge in electric vehicle demand is turning the Outback into the world's most valuable real estate.</p>
+</div>
+<div class="flex items-center justify-between border-t border-whisper-border pt-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a middle-aged woman with sharp features, wearing a charcoal grey blazer. She is set against a clean, out-of-focus office background with bright, natural window lighting. The style is modern editorial photography with high clarity and a neutral, professional color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-8Dyu-xaKILTqTtgaR9_8kBC59cplQwzS-7hrXUJ4GI9DQu45S8FLlaqrgRmb57QhhDO0EhgYrwYXcvyOPlv9GKk2sNOBlFXLLoctFOw-X6kQFQvXrrZAeSIFUCh8J979yeInK5C4WQkZHQhtrYy1K3wN-8k2fhOaJYZ5XY7p6k43kkTQOpYqRBpO0ICfKzw143GxYXJvtf_uk9xan0ePDMylGNMSz2b61LpBRaxz4u0uXWSiWKc4"/>
+</div>
+<div>
+<p class="text-sm font-bold">Julianne Vance</p>
+<p class="text-xs text-muted-steel">Chief Economist</p>
+</div>
+</div>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-lg font-label-mono text-label-mono hover:bg-primary hover:text-on-primary transition-all duration-300">READ REPORT</button>
+</div>
+</div>
+<!-- Secondary Trend Card -->
+<div class="whisper-card rounded-xl overflow-hidden group">
+<div class="h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A high-contrast black and white photograph of an abstract architectural spiral staircase in a modern corporate headquarters. The image emphasizes clean lines, geometric precision, and a sense of ascending progress. Soft shadows play across the white surfaces, creating a minimalist and sophisticated business atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8ou2UW55WP_2gCmTYiE6kM1SiRR_GJ3eiG39Gr9hzp9k_BtmmPB0mS8l8l2YanYYkY2ujov7vrYg1zjKeq_8GBaftjKRNQEfEuVVaRTtvQhs-qjIjo62kO2AfI0r6PPuwOXPtoNJEAIeAVasCBMHsB5UXdIpQKrPH9GMCaGnegTQET-Woc5z9h9zBizZS6IYawp7Rmq2D1Gqf30BB18_GwiS5yQeLMbc3aZxMv7xy4nqQqMvmaocI"/>
+</div>
+<div class="p-6">
+<span class="font-label-mono text-label-mono text-primary mb-2 block tracking-widest uppercase">ESG Metrics</span>
+<h3 class="font-headline-md text-headline-md mb-3 leading-tight">Beyond the Greenwash: New EU Standards</h3>
+<p class="text-sm text-muted-steel">New reporting requirements are forcing corporations to prove their sustainability claims with hard data.</p>
+</div>
+</div>
+<!-- Small Grid Items -->
+<div class="whisper-card rounded-xl p-6 flex flex-col justify-center">
+<span class="font-label-mono text-label-mono text-muted-steel mb-2 block tracking-widest uppercase">Podcast</span>
+<h3 class="font-headline-md text-headline-md mb-4 text-primary italic">"The interest rate ceiling is a mirage."</h3>
+<p class="text-sm mb-6">Ep. 42: Macro shifts with Dr. Aris Thorne.</p>
+<button class="flex items-center gap-2 font-label-mono text-label-mono text-primary uppercase font-bold">
+<span class="material-symbols-outlined" data-icon="play_circle" style="font-variation-settings: 'FILL' 1;">play_circle</span> Listen Now
+                    </button>
+</div>
+<div class="whisper-card rounded-xl overflow-hidden relative group">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A macro photograph of a silicon wafer microchip with glowing gold and copper circuitry under a cool magenta and deep blue laboratory light. The focus is incredibly sharp on the intricate paths of the processor, representing cutting-edge semiconductor technology and industrial innovation in a futuristic style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBQffyzIJ0e5p-G7VA_7jcY9S5jNAXsUPzJYIglSSc94d8_2NiQq683ckEz-3OTfRJAquAd8J_Fh0b-czyLQdFnVG635sNVSe3rNkTcTQuM5IiRBrEGxclDc1hjKD58t5HqP38nvp6jNVYDku-xX0cbJyP94Jz698olSm9u5xIZdokpUZjeRLWfT1lCFHmEJm1xyfP-YLX1uFo02Gf2GXluXxZblV7tEjBTzskJWOqsBHQ9dV9IZuZ_')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/90 to-transparent"></div>
+<div class="absolute bottom-0 p-6">
+<span class="font-label-mono text-label-mono text-primary-fixed mb-2 block tracking-widest uppercase">Tech Policy</span>
+<h3 class="font-headline-md text-headline-md text-pure-surface mb-2">Chip Wars 2.0</h3>
+<p class="text-xs text-outline-variant">The subsidy race for semiconductor sovereignty.</p>
+</div>
+</div>
+<div class="whisper-card rounded-xl p-6 flex flex-col justify-between border-b-4 border-b-primary">
+<div>
+<h4 class="font-label-mono text-label-mono text-muted-steel mb-4 uppercase tracking-widest">Market Sentiment</h4>
+<div class="text-4xl font-bold mb-2">68.2%</div>
+<p class="text-sm text-primary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined" data-icon="trending_up">trending_up</span> BULLISH
+                        </p>
+</div>
+<p class="text-xs text-muted-steel mt-4">Consumer confidence index hits a 14-month high despite inflationary pressures.</p>
+</div>
+</div>
+</section>
+<!-- Newsletter Section -->
+<section class="relative rounded-2xl overflow-hidden bg-on-background p-12 md:p-20 text-center mb-32">
+<div class="absolute inset-0 opacity-10">
 
-            <div class="item">
-              <h3>Top fan: $1,847 in month one</h3>
-              <p>This is the key metric. One fan paid more than the next 50 combined. The system identifies high-spenders early and routes them to personalized premium flows — all automated, all Claude Code.</p>
+</div>
+<div class="relative z-10 max-w-2xl mx-auto">
+<span class="font-label-mono text-label-mono text-primary-fixed uppercase tracking-[0.2em] mb-6 block">Intelligence briefing</span>
+<h2 class="font-headline-xl text-headline-xl text-pure-surface mb-6 leading-tight">Insight delivered to your inbox, not your noise.</h2>
+<p class="text-body-lg text-outline-variant mb-10">Join 45,000+ executives who start their Monday with our curated analysis of the global economy.</p>
+<form class="flex flex-col md:flex-row gap-4">
+<input class="flex-1 bg-surface-container-low/10 border border-outline/30 rounded-lg px-6 py-4 text-pure-surface font-label-mono focus:outline-none focus:border-primary transition-colors" placeholder="Email address" type="email"/>
+<button class="bg-primary text-on-primary px-10 py-4 rounded-lg font-bold hover:scale-[1.02] active:scale-95 transition-all duration-200">SUBSCRIBE</button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-inverse-surface border-t border-whisper-border dark:border-outline-variant">
+<div class="w-full py-12 px-margin-desktop flex flex-col md:flex-row justify-between items-center max-w-max-width mx-auto">
+<div class="font-headline-md text-headline-md text-on-background dark:text-surface-bright mb-8 md:mb-0">
+                NewsFixd
             </div>
+<div class="flex flex-wrap justify-center gap-8 mb-8 md:mb-0">
+<a class="font-label-mono text-label-mono text-muted-steel dark:text-outline-variant hover:text-primary transition-opacity opacity-80 hover:opacity-100" href="/newsletter/">Newsletter</a>
+<a class="font-label-mono text-label-mono text-muted-steel dark:text-outline-variant hover:text-primary transition-opacity opacity-80 hover:opacity-100" href="/about.html">About</a>
+<a class="font-label-mono text-label-mono text-muted-steel dark:text-outline-variant hover:text-primary transition-opacity opacity-80 hover:opacity-100" href="#">Archive</a>
+<a class="font-label-mono text-label-mono text-muted-steel dark:text-outline-variant hover:text-primary transition-opacity opacity-80 hover:opacity-100" href="/privacy.html">Privacy</a>
+<a class="font-label-mono text-label-mono text-muted-steel dark:text-outline-variant hover:text-primary transition-opacity opacity-80 hover:opacity-100" href="/terms.html">Terms</a>
+</div>
+<div class="font-label-mono text-label-mono text-muted-steel dark:text-outline-variant">
+                © 2024 NewsFixd. Editorial Integrity First.
+            </div>
+</div>
+</footer>
+<!-- Custom Cursor Effect -->
+<div class="fixed pointer-events-none z-[100] w-6 h-6 rounded-full border border-primary transition-transform duration-100 ease-out hidden md:block" id="custom-cursor"></div>
+<script>
+        const cursor = document.getElementById('custom-cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.transform = `translate(${e.clientX - 12}px, ${e.clientY - 12}px)`;
+        });
 
-            <div class="item">
-              <h3>Customer acquisition cost: $0</h3>
-              <p>All 1,247 subscribers came from platform discovery. No ads, no influencers, no paid traffic. The OnlyFans algorithm pushes new personas with high engagement — and a 24/7 AI that never sleeps generates a lot of engagement.</p>
-            </div>
+        // Simple hover scaling for all interactive elements
+        document.querySelectorAll('a, button, .whisper-card').forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursor.style.transform += ' scale(1.5)';
+                cursor.style.backgroundColor = 'rgba(0, 74, 198, 0.05)';
+            });
+            el.addEventListener('mouseleave', () => {
+                cursor.style.transform = cursor.style.transform.replace(' scale(1.5)', '');
+                cursor.style.backgroundColor = 'transparent';
+            });
+        });
 
-            <div class="item">
-              <h3>Marginal cost of persona #2: near zero</h3>
-              <p>Compute costs for an AI persona run roughly $200-400/month in API usage. Once the infrastructure is built, adding a second persona costs the same as the first. 10 personas at $43K each = $430K/month with the same operator.</p>
-            </div>
-
-            <div class="item">
-              <h3>Churn and retention</h3>
-              <p>Monthly churn runs around 8-12% for AI personas — better than human creators who average 15-18%. The AI never misses a message, never gets sick, and never has a bad day. Consistency drives retention.</p>
-            </div>
-          </div>
-        </article>
-        <aside class="stack">
-          <div class="card cardPad">
-            <p class="eyebrow">Revenue projection</p>
-            <div class="list">
-              <div class="item">
-                <h3>1 persona</h3>
-                <p>$516K/year gross</p>
-              </div>
-              <div class="item">
-                <h3>5 personas</h3>
-                <p>$2.58M/year gross</p>
-              </div>
-              <div class="item">
-                <h3>10 personas</h3>
-                <p>$5.16M/year gross</p>
-              </div>
-              <div class="item">
-                <h3>Operating cost</h3>
-                <p>$2K-4K/month for all 10</p>
-              </div>
-            </div>
-          </div>
-          <div class="card cardPad">
-            <p class="eyebrow">Affiliate</p>
-            <div class="slot" style="min-height:120px">AI persona setup guides, automation tools, hosting services</div>
-          </div>
-        </aside>
-      </section>
-
-      <section class="section newsletter-section">
-        <div class="newsletter-box">
-          <form class="subscribe-form" action="/api/subscribe" method="POST">
-            <input type="email" name="email" placeholder="your@email.com" required class="subscribe-input">
-            <input type="hidden" name="source" value="newsfixd-money">
-            <button type="submit" class="button primary subscribe-btn">Subscribe</button>
-          </form>
-          <p class="subscribe-note">One email a week. Break downs, strategies, builds.</p>
-        </div>
-      </section>
-    </main>
-    <footer class="footer wrap">
-      <p>NewsFixd breaks down AI personas, autonomous income streams, and the tax strategies that keep the government out of your revenue.</p>
-    </footer>
-  </div>
-</body>
-</html>
+        // Marquee Animation CSS Injection
+        const style = document.createElement('style');
+        style.innerHTML = `
+            @keyframes marquee {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(-50%); }
+            }
+            .animate-marquee {
+                display: flex;
+                width: 200%;
+                animation: marquee 40s linear infinite;
+            }
+            .animate-marquee:hover {
+                animation-play-state: paused;
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+<script src="/site.js"></script>
+</body></html>

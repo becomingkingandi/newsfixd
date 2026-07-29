@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Global Archive | NewsFixd</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        @font-face {
+            font-family: 'Satoshi';
+            src: url('https://api.fontshare.com/v2/fonts?f[]=satoshi@700,900,400&display=swap');
+        }
+        /* Overriding Satoshi for the "Bold Satoshi Typography" request where applicable, falling back to Plus Jakarta Sans as per config */
+        .font-satoshi { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 900; }
+        
+        body {
+            background-color: #F9FAFB;
+            color: #191b23;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .asymmetric-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 1.5rem;
+        }
+
+        .hover-lift {
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+        }
+
+        .glass-tag {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(226, 232, 240, 0.5);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "error-container": "#ffdad6",
+                      "secondary-fixed-dim": "#c8c5ca",
+                      "surface-dim": "#d9d9e5",
+                      "tertiary-fixed": "#ffdbcd",
+                      "on-secondary-fixed": "#1b1b1e",
+                      "primary-container": "#2563eb",
+                      "on-primary": "#ffffff",
+                      "outline-variant": "#c3c6d7",
+                      "canvas-white": "#F9FAFB",
+                      "tertiary-fixed-dim": "#ffb596",
+                      "on-surface-variant": "#434655",
+                      "secondary-container": "#e4e1e6",
+                      "surface-container": "#ededf9",
+                      "primary": "#004ac6",
+                      "on-error": "#ffffff",
+                      "on-tertiary-fixed": "#360f00",
+                      "on-primary-fixed": "#00174b",
+                      "tertiary-container": "#bc4800",
+                      "muted-steel": "#71717A",
+                      "background": "#faf8ff",
+                      "error": "#ba1a1a",
+                      "primary-fixed-dim": "#b4c5ff",
+                      "inverse-on-surface": "#f0f0fb",
+                      "inverse-primary": "#b4c5ff",
+                      "on-tertiary-fixed-variant": "#7d2d00",
+                      "surface-tint": "#0053db",
+                      "on-secondary": "#ffffff",
+                      "tertiary": "#943700",
+                      "secondary": "#5f5e61",
+                      "surface-container-lowest": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "on-tertiary-container": "#ffede6",
+                      "on-background": "#191b23",
+                      "on-primary-fixed-variant": "#003ea8",
+                      "surface-variant": "#e1e2ed",
+                      "surface-container-low": "#f3f3fe",
+                      "pure-surface": "#FFFFFF",
+                      "inverse-surface": "#2e3039",
+                      "surface": "#faf8ff",
+                      "on-tertiary": "#ffffff",
+                      "primary-fixed": "#dbe1ff",
+                      "secondary-fixed": "#e4e1e6",
+                      "on-secondary-container": "#656467",
+                      "surface-container-highest": "#e1e2ed",
+                      "whisper-border": "rgba(226, 232, 240, 0.5)",
+                      "surface-bright": "#faf8ff",
+                      "on-surface": "#191b23",
+                      "outline": "#737686",
+                      "on-secondary-fixed-variant": "#47464a",
+                      "surface-container-high": "#e7e7f3",
+                      "on-primary-container": "#eeefff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-desktop": "2.5rem",
+                      "gutter": "1.5rem",
+                      "reading-column": "720px",
+                      "max-width": "1280px",
+                      "margin-mobile": "1rem"
+              },
+              "fontFamily": {
+                      "label-mono": ["JetBrains Mono"],
+                      "body-md": ["Plus Jakarta Sans"],
+                      "headline-xl": ["Plus Jakarta Sans"],
+                      "headline-lg": ["Plus Jakarta Sans"],
+                      "body-lg": ["Plus Jakarta Sans"],
+                      "headline-xl-mobile": ["Plus Jakarta Sans"],
+                      "headline-md": ["Plus Jakarta Sans"]
+              },
+              "fontSize": {
+                      "label-mono": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-xl": ["56px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                      "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-xl-mobile": ["40px", {"lineHeight": "1.1", "fontWeight": "700"}],
+                      "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+      </script>
+</head>
+<body class="font-body-md text-body-md">
+<!-- Top Navigation Shell -->
+<header class="bg-canvas-white sticky top-0 z-50 transition-all duration-300">
+<nav class="flex justify-between items-center w-full px-margin-desktop py-6 max-w-max-width mx-auto">
+<div class="flex items-center gap-12">
+<a class="font-headline-md text-headline-md text-on-background tracking-tighter uppercase font-black" href="/">NewsFixd</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-body-md text-body-md text-primary border-b-2 border-primary pb-1 transition-colors duration-300" href="/global/">Global</a>
+<a class="font-body-md text-body-md text-muted-steel pb-1 hover:text-primary transition-colors duration-300" href="/politics/">Politics</a>
+<a class="font-body-md text-body-md text-muted-steel pb-1 hover:text-primary transition-colors duration-300" href="/tech/">Tech</a>
+<a class="font-body-md text-body-md text-muted-steel pb-1 hover:text-primary transition-colors duration-300" href="#">Culture</a>
+<a class="font-body-md text-body-md text-muted-steel pb-1 hover:text-primary transition-colors duration-300" href="/business/">Business</a>
+<a class="font-body-md text-body-md text-muted-steel pb-1 hover:text-primary transition-colors duration-300" href="/science/">Science</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-on-background hover:scale-95 duration-200">search</button>
+<button class="material-symbols-outlined text-on-background hover:scale-95 duration-200">account_circle</button>
+</div>
+</nav>
+</header>
+<main class="max-w-max-width mx-auto px-margin-desktop pt-12 pb-24">
+<!-- Hero Section: Asymmetric -->
+<header class="mb-20">
+<div class="flex flex-col md:flex-row justify-between items-end gap-8 border-b border-whisper-border pb-12">
+<div class="max-w-3xl">
+<span class="font-label-mono text-label-mono uppercase tracking-widest text-primary mb-4 block">Archive / 2024</span>
+<h1 class="font-headline-xl text-headline-xl leading-tight mb-6">The Global Pulse.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                        An curated anthology of international reporting, from the shifting skylines of emerging economies to the silent summits of global diplomacy. Explore the narratives that define our decade.
+                    </p>
+</div>
+<div class="flex gap-4">
+<button class="bg-primary text-on-primary px-8 py-3 rounded-none font-label-mono text-label-mono uppercase tracking-widest hover:bg-on-primary-fixed-variant transition-all active:scale-95">Subscribe</button>
+</div>
+</div>
+</header>
+<!-- World Briefing: Bento Style -->
+<section class="mb-32">
+<div class="flex justify-between items-center mb-10">
+<h2 class="font-headline-lg text-headline-lg">World Briefing</h2>
+<div class="w-24 h-px bg-outline-variant"></div>
+</div>
+<div class="asymmetric-grid">
+<!-- Large Feature -->
+<div class="col-span-12 md:col-span-8 group relative overflow-hidden rounded-xl hover-lift">
+<div class="aspect-[16/9] w-full relative">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A cinematic, wide-angle photograph of a futuristic metropolis at twilight, featuring gleaming glass skyscrapers reflecting a deep indigo sky. Soft orange lights from building windows create a warm contrast against the cool architectural shadows. The image captures a sense of sophisticated urban development and technological progress in a modern global city. The lighting is crisp and the composition follows the rule of thirds for a gallery-quality editorial feel." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD5IiItGFJTSdvVKQg1k84g_PFodUvPjzU_zD-OPz1_7WDJBr7bERIGrGzpvue3HFEo4FN7ajyECbHMk_u63WgP_unXonBq4_4YT_OMpp85jeDiypW1dlNFXiwNJi_xH9XHtc7Rty2sk_0bdcxnUGJaVpp4d9dEaveIuTSKgw2FS4al8N0OPzD3KfCQh5SJwQZmwvBpksOAFXXxRIh9dlDtyXL062BywAontm6NVaKkd-5KDuiqfPQ2')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 p-8 text-white">
+<span class="glass-tag px-3 py-1 rounded-full text-[10px] font-label-mono uppercase tracking-widest text-on-background mb-4 inline-block">Architecture</span>
+<h3 class="font-headline-md text-headline-md mb-2">The New Verticality: Redefining the Skyline of Singapore</h3>
+<p class="opacity-80 max-w-xl font-body-md line-clamp-2">How parametric design and green-integration are creating the first carbon-neutral high-rises in Southeast Asia.</p>
+</div>
+</div>
+</div>
+<!-- Secondary Item -->
+<div class="col-span-12 md:col-span-4 flex flex-col gap-6">
+<div class="bg-pure-surface p-6 rounded-xl border border-whisper-border hover-lift">
+<span class="font-label-mono text-label-mono text-primary uppercase mb-2 block">Environment</span>
+<h4 class="font-headline-md text-[20px] leading-tight mb-3">Glacial Echoes: The Silent Thaw of the Andean Range</h4>
+<p class="text-on-surface-variant text-sm mb-4">Correspondents report on the vanishing water sources of high-altitude communities.</p>
+<a class="font-label-mono text-[10px] uppercase border-b border-on-background pb-1 inline-block" href="#">Read Briefing</a>
+</div>
+<div class="bg-pure-surface p-6 rounded-xl border border-whisper-border hover-lift">
+<span class="font-label-mono text-label-mono text-primary uppercase mb-2 block">Diplomacy</span>
+<h4 class="font-headline-md text-[20px] leading-tight mb-3">The Brussels Accord: A New Chapter for Digital Sovereignty</h4>
+<p class="text-on-surface-variant text-sm mb-4">Inside the closed-door negotiations that reshaped privacy laws for a billion citizens.</p>
+<a class="font-label-mono text-[10px] uppercase border-b border-on-background pb-1 inline-block" href="#">Read Briefing</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Deep Dives: Visual Grid -->
+<section>
+<div class="flex justify-between items-center mb-10">
+<h2 class="font-headline-lg text-headline-lg">Deep Dives</h2>
+<div class="flex items-center gap-4">
+<span class="font-label-mono text-label-mono text-muted-steel">Sorted by: Most Recent</span>
+<span class="material-symbols-outlined text-muted-steel">filter_list</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Card 1 -->
+<div class="group">
+<div class="aspect-[3/4] mb-6 overflow-hidden rounded-xl border border-whisper-border">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" data-alt="A high-contrast, intimate portrait of an elderly diplomat in a dimly lit, wood-paneled library. The lighting is dramatic, inspired by Rembrandt, highlighting the deep lines of character on the subject's face. Surrounded by stacks of weathered leather-bound books and an old silver inkwell, the scene evokes a sense of history, gravitas, and quiet intelligence. The color palette is rich with deep mahoganies and charcoal grays." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDBIG0b9lpf5QDwFR1sEJqjn2DJu6Y8kOBLG9S5Zaiae8M3uEREW2pE1tMdhtbYoENrQjp7cuIHiCG02V8a4xpRW8bpx--iw8UzDpVjDxTEanPjl2x9NnYXLWA6yXhtrpb7TGtp0znY0Vgp3FOtdZTjLbTpWZljrYgtCAtgZZq3yV87aZCOUBynHXoVmtEmsKIHZ1Tt7WXVRHh_FDd8mi1fQE9PsWziMkl814-ZTwBRLjTvMPQ6UIbM')"></div>
+</div>
+<span class="font-label-mono text-label-mono text-primary mb-3 block">Perspective</span>
+<h3 class="font-headline-md text-headline-md leading-tight mb-4 group-hover:text-primary transition-colors">The Architect of Peace: An Interview with Elias Thorne</h3>
+<p class="text-on-surface-variant mb-6 line-clamp-3">Fifty years of back-channel negotiations distilled into a single, provocative afternoon conversation in Geneva.</p>
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary-container"></div>
+<span class="font-label-mono text-label-mono text-on-background">By Clara Oswald</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group mt-12">
+<div class="aspect-[3/4] mb-6 overflow-hidden rounded-xl border border-whisper-border">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" data-alt="A breathtaking aerial photograph of a winding blue river cutting through a dense, vibrant green rainforest at dawn. Soft morning mist clings to the treetops, illuminated by the first golden rays of sunlight. The image is captured with high-resolution clarity, showcasing the intricate textures of the wilderness. The atmosphere is serene, emphasizing the raw beauty and environmental fragility of the Amazon basin." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCqwh8HiGd4Drsb78e5ghE2wRDawkXyN6JHk9xKg-JiBCLTjzuNhujm267l0XUFhKf8BZQjmiqFTqd7qR0W6yR_6NFUYl-UMTAEwQ3ELiSmb6UDa8u97O9fKBnX9XUVC-hpbrShLYi1S7Xs-lWXmvZbFXQrxsozHJijMS6ZsJ-tgmWY8JH2VxXIA05Yk0FjKpNKR0DngZkOTAWW12t7LYOkI2yAGzekA4LJ93DR1yNK2j7pQoyl5bYF')"></div>
+</div>
+<span class="font-label-mono text-label-mono text-primary mb-3 block">Expedition</span>
+<h3 class="font-headline-md text-headline-md leading-tight mb-4 group-hover:text-primary transition-colors">Beyond the Canopy: Mapping the Unseen Amazon</h3>
+<p class="text-on-surface-variant mb-6 line-clamp-3">New LiDAR technology reveals ancient, hidden civilizations beneath the densest foliage on Earth.</p>
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary-container"></div>
+<span class="font-label-mono text-label-mono text-on-background">By Julian Vane</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group">
+<div class="aspect-[3/4] mb-6 overflow-hidden rounded-xl border border-whisper-border">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" data-alt="A minimalist, wide-shot photograph of a futuristic white laboratory interior with clean, geometric lines. Scientists in sleek, contemporary protective gear work silently at glowing holographic interfaces. The lighting is sterile yet inviting, with soft blue accents illuminating the workspace. The scene conveys high-tech innovation, medical research, and a clean, gallery-like aesthetic of clinical precision." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuATk8eHYeZ25r0JgnD2PFz_SVJgITypCd12BPjSoWSsTQbBU9KseUaDpokFFlbrFdKwQ-Ku8yNRkE9aSzxw-TIFxPUH4KbAmW_UlIcP5N9TixPlO6Wyb85qTRvagQBhE0Lutaq6ECclGRXenJnf0aFziX090mPtf7F3kits2FtpTpHep4J5uoa4y6OU_CgM7KJgiFpLrKMb0aFYrnhG4l5xPWwFptlJNpLmisM2VL-JJNbDhvHXcdrG')"></div>
+</div>
+<span class="font-label-mono text-label-mono text-primary mb-3 block">Science</span>
+<h3 class="font-headline-md text-headline-md leading-tight mb-4 group-hover:text-primary transition-colors">The Quantum Leap: Computing at the Edge of Logic</h3>
+<p class="text-on-surface-variant mb-6 line-clamp-3">A deep dive into the laboratories in Zurich where the boundaries of bits and atoms are being erased.</p>
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary-container"></div>
+<span class="font-label-mono text-label-mono text-on-background">By Dr. Sarah Lin</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="bg-surface-container-low w-full mt-20 border-t border-whisper-border">
+<div class="w-full py-12 px-margin-desktop flex flex-col md:flex-row justify-between items-center max-w-max-width mx-auto">
+<div class="mb-8 md:mb-0">
+<span class="font-headline-md text-headline-md text-on-background block mb-2">NewsFixd</span>
+<p class="font-label-mono text-label-mono text-muted-steel">© 2024 NewsFixd. Editorial Integrity First.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-label-mono text-label-mono text-muted-steel hover:text-primary transition-opacity opacity-80 hover:opacity-100" href="/newsletter/">Newsletter</a>
+<a class="font-label-mono text-label-mono text-muted-steel hover:text-primary transition-opacity opacity-80 hover:opacity-100" href="/about.html">About</a>
+<a class="font-label-mono text-label-mono text-muted-steel hover:text-primary transition-opacity opacity-80 hover:opacity-100" href="#">Archive</a>
+<a class="font-label-mono text-label-mono text-muted-steel hover:text-primary transition-opacity opacity-80 hover:opacity-100" href="/privacy.html">Privacy</a>
+<a class="font-label-mono text-label-mono text-muted-steel hover:text-primary transition-opacity opacity-80 hover:opacity-100" href="/terms.html">Terms</a>
+</div>
+</div>
+</footer>
+<script>
+        // Subtle micro-interaction for the navigation on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-sm', 'py-2');
+                header.querySelector('nav').classList.remove('py-6');
+                header.querySelector('nav').classList.add('py-3');
+            } else {
+                header.classList.remove('shadow-sm', 'py-2');
+                header.querySelector('nav').classList.remove('py-3');
+                header.querySelector('nav').classList.add('py-6');
+            }
+        });
+
+        // Staggered reveal for grid items
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.opacity = "1";
+                        entry.target.style.transform = "translateY(0)";
+                    }, index * 100);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.group, .hover-lift').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transform = "translateY(20px)";
+            el.style.transition = "all 0.6s cubic-bezier(0.16, 1, 0.3, 1)";
+            observer.observe(el);
+        });
+    </script>
+<script src="/site.js"></script>
+</body></html>

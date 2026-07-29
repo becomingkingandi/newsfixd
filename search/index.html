@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Search Results | NewsFixd</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Config Verbatim -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface-variant": "#434655",
+                    "surface-container-low": "#f3f3fe",
+                    "on-tertiary-fixed": "#360f00",
+                    "secondary": "#5f5e61",
+                    "surface-variant": "#e1e2ed",
+                    "tertiary-fixed": "#ffdbcd",
+                    "primary-container": "#2563eb",
+                    "surface-bright": "#faf8ff",
+                    "surface": "#faf8ff",
+                    "secondary-fixed-dim": "#c8c5ca",
+                    "muted-steel": "#71717A",
+                    "secondary-fixed": "#e4e1e6",
+                    "primary-fixed": "#dbe1ff",
+                    "surface-dim": "#d9d9e5",
+                    "tertiary": "#943700",
+                    "on-secondary-fixed-variant": "#47464a",
+                    "background": "#faf8ff",
+                    "inverse-primary": "#b4c5ff",
+                    "on-primary-container": "#eeefff",
+                    "on-tertiary-container": "#ffede6",
+                    "surface-container-highest": "#e1e2ed",
+                    "whisper-border": "rgba(226, 232, 240, 0.5)",
+                    "on-error": "#ffffff",
+                    "on-secondary-container": "#656467",
+                    "on-secondary-fixed": "#1b1b1e",
+                    "surface-container-lowest": "#ffffff",
+                    "on-background": "#191b23",
+                    "on-surface": "#191b23",
+                    "error-container": "#ffdad6",
+                    "surface-container": "#ededf9",
+                    "inverse-on-surface": "#f0f0fb",
+                    "tertiary-fixed-dim": "#ffb596",
+                    "secondary-container": "#e4e1e6",
+                    "on-primary-fixed-variant": "#003ea8",
+                    "primary": "#004ac6",
+                    "on-tertiary-fixed-variant": "#7d2d00",
+                    "surface-tint": "#0053db",
+                    "tertiary-container": "#bc4800",
+                    "canvas-white": "#F9FAFB",
+                    "pure-surface": "#FFFFFF",
+                    "outline-variant": "#c3c6d7",
+                    "primary-fixed-dim": "#b4c5ff",
+                    "on-primary-fixed": "#00174b",
+                    "surface-container-high": "#e7e7f3",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "outline": "#737686",
+                    "on-primary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "inverse-surface": "#2e3039",
+                    "error": "#ba1a1a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "2.5rem",
+                    "reading-column": "720px",
+                    "margin-mobile": "1rem",
+                    "max-width": "1280px",
+                    "gutter": "1.5rem"
+            },
+            "fontFamily": {
+                    "body-md": ["Plus Jakarta Sans"],
+                    "label-mono": ["JetBrains Mono"],
+                    "headline-xl": ["Plus Jakarta Sans"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "headline-xl-mobile": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-mono": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "headline-xl": ["56px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-xl-mobile": ["40px", {"lineHeight": "1.1", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .editorial-shadow {
+            box-shadow: 0 4px 20px -4px rgba(0, 74, 198, 0.05);
+        }
+        .editorial-shadow-hover:hover {
+            box-shadow: 0 12px 30px -6px rgba(0, 74, 198, 0.08);
+            transform: translateY(-2px);
+        }
+        .stagger-reveal {
+            animation: reveal 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+            opacity: 0;
+        }
+        @keyframes reveal {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .reading-container {
+            max-width: 720px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<header class="w-full sticky top-0 z-50 bg-background/80 backdrop-blur-md">
+<nav class="flex justify-between items-center max-w-max-width mx-auto px-margin-desktop py-6">
+<div class="font-headline-md text-headline-md font-bold text-on-background">NewsFixd</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-body-md text-body-md text-muted-steel hover:text-primary transition-colors duration-200" href="/politics/">Politics</a>
+<a class="font-body-md text-body-md text-muted-steel hover:text-primary transition-colors duration-200" href="/tech/">Tech</a>
+<a class="font-body-md text-body-md text-muted-steel hover:text-primary transition-colors duration-200" href="#">Culture</a>
+<a class="font-body-md text-body-md text-muted-steel hover:text-primary transition-colors duration-200" href="/science/">Science</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-primary text-[24px] active:scale-95 transition-transform duration-100">account_circle</button>
+</div>
+</nav>
+</header>
+<main class="max-w-max-width mx-auto px-margin-desktop py-12 min-h-screen">
+<!-- Search Header Section -->
+<section class="mb-16 stagger-reveal" style="animation-delay: 0.1s;">
+<div class="max-w-reading-column">
+<h1 class="font-headline-xl text-headline-xl mb-8 tracking-tight">Search Results</h1>
+<!-- Search Input with Whisper Border -->
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-muted-steel group-focus-within:text-primary transition-colors">search</span>
+<input class="w-full bg-pure-surface border border-whisper-border rounded-xl py-5 pl-12 pr-6 font-body-lg text-body-lg focus:outline-none focus:ring-2 focus:ring-primary/10 focus:border-primary transition-all placeholder:text-muted-steel/50" placeholder="Search news, topics, or authors..." type="text" value="Artificial Intelligence"/>
+</div>
+<div class="mt-6 flex flex-wrap gap-3">
+<span class="font-label-mono text-label-mono text-muted-steel uppercase">Quick Filters:</span>
+<button class="bg-transparent border border-whisper-border rounded-full px-4 py-1 font-label-mono text-label-mono text-primary hover:bg-surface-container-low transition-colors">Latest</button>
+<button class="bg-primary text-on-primary rounded-full px-4 py-1 font-label-mono text-label-mono">Relevance</button>
+<button class="bg-transparent border border-whisper-border rounded-full px-4 py-1 font-label-mono text-label-mono text-muted-steel hover:bg-surface-container-low transition-colors">Opinion</button>
+</div>
+</div>
+</section>
+<!-- Asymmetric Grid Results -->
+<section class="grid grid-cols-12 gap-gutter">
+<!-- Result 1: Large Featured Card (8 Columns) -->
+<article class="col-span-12 md:col-span-8 group cursor-pointer stagger-reveal" style="animation-delay: 0.2s;">
+<div class="bg-pure-surface rounded-xl border border-whisper-border overflow-hidden editorial-shadow editorial-shadow-hover transition-all duration-300">
+<div class="grid grid-cols-1 md:grid-cols-2">
+<div class="h-64 md:h-full relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A cinematic, high-contrast photograph of a futuristic silicon neural network structure glowing with subtle deep blue light pulses against a charcoal ink background. The lighting is sophisticated and minimalist, reflecting a modern editorial tech aesthetic. Pristine white highlights define the crystalline structures of the processor, suggesting high-tech clarity and innovation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC36B1zy6sA-96zqlKckgbxMFFZHyi1k04t39oLYHKwFHz6hyng9W-5BofjXZo_y6fyuMt_5L2YGdPpwV5pAR-Ev1gzMeQ9WgTRBhaRTeXLxFglAdJv-HP4hjni2fjg7WQ7QZh2xQpARMzRfaPDJ4sVQIuy9lQ9Nt-qjTI13b90GXoYnpEe7_Dv5WzOePmQcxq_r-KEk7IQt6jwhyHjJsmkEbHMy6vdNUdEmzkc3gu9B-NC1L_hNNkdhY-FQZzPwibLvghTaqQWPXY"/>
+</div>
+<div class="p-8 flex flex-col justify-center">
+<div class="flex items-center gap-3 mb-4">
+<span class="bg-surface-container-low text-primary px-3 py-1 rounded-full font-label-mono text-label-mono">TECH</span>
+<span class="text-muted-steel font-label-mono text-label-mono">4 MIN READ</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg mb-4 group-hover:text-primary transition-colors">The Ethical Horizon of Generative Neural Architectures</h2>
+<p class="text-on-surface-variant font-body-md text-body-md line-clamp-3 mb-6">As language models evolve beyond simple prediction, the industry faces a critical crossroads regarding intellectual property and the very definition of creativity in the digital age.</p>
+<div class="flex items-center gap-3 mt-auto">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest"></div>
+<span class="font-label-mono text-label-mono text-on-surface">By Elena Vance</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Result 2: Vertical Secondary (4 Columns) -->
+<article class="col-span-12 md:col-span-4 group cursor-pointer stagger-reveal" style="animation-delay: 0.3s;">
+<div class="h-full bg-pure-surface rounded-xl border border-whisper-border p-6 editorial-shadow editorial-shadow-hover transition-all duration-300">
+<span class="bg-surface-container-low text-primary px-3 py-1 rounded-full font-label-mono text-label-mono mb-6 inline-block">POLITICS</span>
+<h3 class="font-headline-md text-headline-md mb-4 group-hover:text-primary transition-colors leading-tight">Global Summit Outlines New Governance for AI Integration</h3>
+<p class="text-on-surface-variant font-body-md text-body-md mb-8 line-clamp-4">International leaders convene in Geneva to establish a unified framework for cross-border data protection and algorithmic accountability in public services.</p>
+<div class="mt-auto pt-6 border-t border-whisper-border flex justify-between items-center">
+<span class="font-label-mono text-label-mono text-muted-steel italic">12 Hours Ago</span>
+<span class="material-symbols-outlined text-muted-steel group-hover:text-primary transition-colors">bookmark</span>
+</div>
+</div>
+</article>
+<!-- Result 3: Horizontal Layout (4 Columns) -->
+<article class="col-span-12 md:col-span-4 group cursor-pointer stagger-reveal" style="animation-delay: 0.4s;">
+<div class="bg-pure-surface rounded-xl border border-whisper-border overflow-hidden editorial-shadow editorial-shadow-hover transition-all duration-300">
+<div class="h-48 relative">
+<img class="w-full h-full object-cover" data-alt="A minimalist architectural shot of a bright gallery space with clean white walls and a polished floor. A single piece of modern art made of glass and steel catches the light, casting soft, diffused shadows. The scene is bathed in high-key daylight, creating an airy, sophisticated atmosphere with a palette of whites and soft greys." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAI3H_afu8KdoouLAGfq4tZu9ewp_WQxrHpA1qwi2-jhp1_Gw_8XF5wizcPLSPfm1l8rA1wkp-Xo2o_e6ex8JqH-QI5qpcA7aYdzOqJnt3qpLEHQO5wJKX49eHMbPETsQ_J6M3b93xlGTKbVcloL1N8B8HZORynJOLMpYtv532Zddq7ErLGvrXE-3UOTdFoupj777ChI-MUFmvohy1kjAgXbSOB91M-9Lg2BD-489Lq4NxTFAkTXWs4ntKpb4QpQLoivZ-ppF2zWlA"/>
+</div>
+<div class="p-6">
+<span class="text-tertiary font-label-mono text-label-mono mb-2 block">CULTURE</span>
+<h3 class="font-headline-md text-headline-md group-hover:text-primary transition-colors mb-2">Digital Art: The New Renaissance</h3>
+<p class="text-on-surface-variant font-body-md text-body-md line-clamp-2">How AI-assisted tools are reshaping the traditional gallery experience and auction markets.</p>
+</div>
+</div>
+</article>
+<!-- Result 4: Text-Only Minimal (8 Columns) -->
+<article class="col-span-12 md:col-span-8 group cursor-pointer stagger-reveal" style="animation-delay: 0.5s;">
+<div class="h-full flex flex-col justify-center p-10 bg-surface-container-low rounded-xl border border-whisper-border editorial-shadow-hover transition-all duration-300">
+<div class="flex items-center gap-4 mb-6">
+<span class="bg-pure-surface text-primary border border-whisper-border px-4 py-1 rounded-full font-label-mono text-label-mono tracking-widest">OPINION</span>
+<div class="h-[1px] flex-grow bg-whisper-border"></div>
+</div>
+<h2 class="font-headline-xl text-headline-lg md:text-headline-xl mb-6 leading-[1.1] group-hover:text-primary transition-colors">The Ghost in the Machine: Why Human Intuition Still Matters</h2>
+<p class="text-on-surface-variant font-body-lg text-body-lg mb-8 max-w-2xl italic">"Automation can replicate patterns, but it cannot yet replicate the profound spontaneity of human connection that defines great journalism."</p>
+<div class="flex items-center justify-between">
+<div class="font-label-mono text-label-mono text-on-surface font-bold uppercase tracking-widest">Dr. Julian Thorne</div>
+<button class="flex items-center gap-2 text-primary font-label-mono text-label-mono group/btn">
+                            READ FULL ESSAY 
+                            <span class="material-symbols-outlined text-[18px] group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+</section>
+<!-- Pagination / Load More -->
+<div class="mt-20 flex flex-col items-center stagger-reveal" style="animation-delay: 0.6s;">
+<button class="bg-primary text-on-primary px-10 py-4 rounded-xl font-body-md text-body-md font-bold active:scale-95 transition-all editorial-shadow flex items-center gap-3">
+                LOAD MORE RESULTS
+                <span class="material-symbols-outlined">expand_more</span>
+</button>
+<p class="mt-6 text-muted-steel font-label-mono text-label-mono">Showing 4 of 1,248 results for "Artificial Intelligence"</p>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 border-t border-whisper-border bg-background">
+<div class="max-w-reading-column mx-auto flex flex-col items-center gap-4 text-center">
+<div class="text-on-surface-variant font-bold">NewsFixd</div>
+<div class="flex gap-6">
+<a class="font-label-mono text-label-mono text-muted-steel hover:text-primary underline decoration-primary" href="/about.html">About</a>
+<a class="font-label-mono text-label-mono text-muted-steel hover:text-primary underline decoration-primary" href="/privacy.html">Privacy</a>
+<a class="font-label-mono text-label-mono text-muted-steel hover:text-primary underline decoration-primary" href="/terms.html">Terms</a>
+<a class="font-label-mono text-label-mono text-muted-steel hover:text-primary underline decoration-primary" href="/feed.xml">RSS</a>
+</div>
+<p class="font-label-mono text-label-mono text-muted-steel">© 2024 NewsFixd. Editorial Clarity.</p>
+</div>
+</footer>
+<script>
+        // Micro-interaction for search input
+        const searchInput = document.querySelector('input[type="text"]');
+        searchInput.addEventListener('focus', () => {
+            searchInput.parentElement.classList.add('scale-[1.01]');
+        });
+        searchInput.addEventListener('blur', () => {
+            searchInput.parentElement.classList.remove('scale-[1.01]');
+        });
+
+        // Simple stagger reveal implementation check
+        document.addEventListener('DOMContentLoaded', () => {
+            const elements = document.querySelectorAll('.stagger-reveal');
+            elements.forEach((el, index) => {
+                el.style.opacity = '1';
+            });
+        });
+    </script>
+<script src="/site.js"></script>
+</body></html>

@@ -1,276 +1,387 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>NewsFixd — AI Personas, Autonomous Income, Tax Strategy</title>
-  <meta name="description" content="An AI persona named Maya cleared $43,000 in 30 days on OnlyFans. She does not sleep. There is nothing to film. No one to type. The bill on $43K of autonomous income? Zero. Welcome to the new economy.">
-  <link rel="canonical" href="https://newsfixd.com/">
-  <meta property="og:title" content="NewsFixd — AI Personas, Autonomous Income, Tax Strategy">
-  <meta property="og:description" content="An AI persona named Maya cleared $43,000 in 30 days on OnlyFans. She does not sleep. There is nothing to film. The tax bill? Zero.">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="/styles.css">
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NewsFixd | Latest Perspectives</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface-variant": "#434655",
+                        "on-error-container": "#93000a",
+                        "surface-tint": "#0053db",
+                        "on-tertiary": "#ffffff",
+                        "surface-container": "#ededf9",
+                        "primary-fixed": "#dbe1ff",
+                        "on-secondary-container": "#656467",
+                        "on-error": "#ffffff",
+                        "primary": "#004ac6",
+                        "on-primary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "secondary": "#5f5e61",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "tertiary": "#943700",
+                        "on-tertiary-fixed": "#360f00",
+                        "background": "#faf8ff",
+                        "outline": "#737686",
+                        "inverse-on-surface": "#f0f0fb",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "tertiary-fixed": "#ffdbcd",
+                        "secondary-fixed-dim": "#c8c5ca",
+                        "on-primary-container": "#eeefff",
+                        "surface-variant": "#e1e2ed",
+                        "tertiary-container": "#bc4800",
+                        "error": "#ba1a1a",
+                        "on-secondary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "surface": "#faf8ff",
+                        "on-background": "#191b23",
+                        "pure-surface": "#FFFFFF",
+                        "on-tertiary-container": "#ffede6",
+                        "on-secondary-fixed": "#1b1b1e",
+                        "surface-dim": "#d9d9e5",
+                        "secondary-fixed": "#e4e1e6",
+                        "surface-container-high": "#e7e7f3",
+                        "secondary-container": "#e4e1e6",
+                        "muted-steel": "#71717A",
+                        "on-primary-fixed": "#00174b",
+                        "inverse-primary": "#b4c5ff",
+                        "primary-container": "#2563eb",
+                        "canvas-white": "#F9FAFB",
+                        "surface-container-low": "#f3f3fe",
+                        "outline-variant": "#c3c6d7",
+                        "on-secondary-fixed-variant": "#47464a",
+                        "on-surface": "#191b23",
+                        "surface-container-highest": "#e1e2ed",
+                        "inverse-surface": "#2e3039",
+                        "whisper-border": "rgba(226, 232, 240, 0.5)",
+                        "surface-bright": "#faf8ff",
+                        "on-tertiary-fixed-variant": "#7d2d00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "2.5rem",
+                        "margin-mobile": "1rem",
+                        "max-width": "1280px",
+                        "gutter": "1.5rem",
+                        "reading-column": "720px"
+                    },
+                    "fontFamily": {
+                        "label-mono": ["JetBrains Mono"],
+                        "headline-xl": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "headline-xl-mobile": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "label-mono": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "headline-xl": ["56px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-xl-mobile": ["40px", {"lineHeight": "1.1", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #faf8ff;
+            color: #191b23;
+            -webkit-font-smoothing: antialiased;
+        }
+        .article-card {
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+        }
+        .article-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -15px rgba(0, 74, 198, 0.08);
+        }
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .stagger-reveal {
+            animation: reveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+        }
+        @keyframes reveal {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
-<body>
-  <div class="shell">
-    <header class="topbar">
-      <div class="wrap">
-        <div class="brand">NewsFixd<small>ai personas · money · tax</small></div>
-        <nav class="nav">
-          <a href="#top">Top</a>
-          <a href="#latest">Latest</a>
-          <a href="/business/">Money</a>
-          <a href="/tech/">AI</a>
-          <a href="/markets/">Tax</a>
-          <a href="/article-view">Stories</a>
-          <a href="/search-results">Search</a>
-          <a href="#newsletter">Subscribe</a>
-        </nav>
-      </div>
-    </header>
-    <main class="wrap">
+<body class="font-body-md text-body-md">
+<!-- Top Navigation Anchor -->
+<header class="w-full sticky top-0 z-50 bg-background/80 backdrop-blur-md">
+<nav class="flex justify-between items-center max-w-max-width mx-auto px-margin-desktop py-6">
+<div class="font-headline-md text-headline-md font-bold text-on-background">
+                NewsFixd
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-body-md text-body-md text-primary dark:text-inverse-primary border-b-2 border-primary pb-1" href="/">Latest</a>
+<a class="font-body-md text-body-md text-muted-steel hover:text-primary transition-colors duration-200" href="/politics/">Politics</a>
+<a class="font-body-md text-body-md text-muted-steel hover:text-primary transition-colors duration-200" href="/tech/">Tech</a>
+<a class="font-body-md text-body-md text-muted-steel hover:text-primary transition-colors duration-200" href="#">Culture</a>
+<a class="font-body-md text-body-md text-muted-steel hover:text-primary transition-colors duration-200" href="/science/">Science</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant">search</span>
+</button>
+<button class="flex items-center gap-2 px-1 py-1 rounded-full border border-whisper-border hover:bg-surface-container-low transition-all">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">account_circle</span>
+</button>
+</div>
+</nav>
+</header>
+<main class="max-w-max-width mx-auto px-margin-desktop py-12">
+<!-- Main Section Header -->
+<section class="mb-16 stagger-reveal" style="animation-delay: 0.1s;">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-whisper-border pb-8">
+<div>
+<span class="font-label-mono text-label-mono text-primary mb-4 block">VOLUME 24 // ISSUE 11</span>
+<h1 class="font-headline-xl text-headline-xl tracking-tight max-w-2xl">Latest Perspectives</h1>
+</div>
+<div class="flex gap-3 overflow-x-auto pb-2 md:pb-0">
+<span class="px-4 py-2 rounded-full border border-primary text-primary font-label-mono text-label-mono whitespace-nowrap">Global Affairs</span>
+<span class="px-4 py-2 rounded-full border border-whisper-border text-muted-steel font-label-mono text-label-mono whitespace-nowrap hover:border-primary hover:text-primary cursor-pointer transition-colors">Science</span>
+<span class="px-4 py-2 rounded-full border border-whisper-border text-muted-steel font-label-mono text-label-mono whitespace-nowrap hover:border-primary hover:text-primary cursor-pointer transition-colors">Culture</span>
+<span class="px-4 py-2 rounded-full border border-whisper-border text-muted-steel font-label-mono text-label-mono whitespace-nowrap hover:border-primary hover:text-primary cursor-pointer transition-colors">Tech</span>
+</div>
+</div>
+</section>
+<!-- Asymmetric Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Featured Large Article (8 columns) -->
+<article class="md:col-span-8 group stagger-reveal" style="animation-delay: 0.2s;">
+<div class="article-card h-full bg-pure-surface rounded-xl border border-whisper-border overflow-hidden flex flex-col">
+<div class="relative aspect-[16/9] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A cinematic, high-angle photograph of a futuristic urban skyline during the golden hour, featuring sleek glass skyscrapers reflecting a soft orange and deep blue sky. The composition uses leading lines and heavy whitespace to evoke a sense of modern editorial clarity and sophistication. The atmosphere is calm, intellectual, and pristine, utilizing a palette of charcoal ink and canvas white." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDUQ_69QNCZEFr0k8aUZ7ODMxzgJ6GQ0MLKro5BJSsNNu8IRfZdju-QkV4NxaiN94ZSIMUwEhjN6zmNGsf85BV7YqYUoptGKCMX6kTaCpD-CWN0QSQSvAxJskcI5tFsAtq2zFJ6vDu0qySjymPcD2bY5N_w9pJQ0cvaiPPIE1-M7cETMGw5arXXvBfsPtywcp8ZjnQqVyCEEtakPL55aVRzZTxe3v04w629J4kufzyvaqOTBwvokRo"/>
+<div class="absolute top-6 left-6">
+<span class="bg-primary text-on-primary font-label-mono text-label-mono px-3 py-1 rounded-sm uppercase tracking-widest">Global Affairs</span>
+</div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex items-center gap-4 mb-4 text-muted-steel font-label-mono text-label-mono">
+<span>BY JULIAN VANCE</span>
+<span>•</span>
+<span>12 MIN READ</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg mb-6 group-hover:text-primary transition-colors">The Rebirth of Diplomacy in an Era of Digital Sovereignty</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant line-clamp-3 mb-8">As traditional borders dissolve into networks, nations are redefining what it means to lead. This deep dive explores how small-state cyber-strategy is outmaneuvering legacy superpowers in the race for technological influence.</p>
+<div class="mt-auto pt-6 border-t border-whisper-border flex justify-between items-center">
+<button class="font-label-mono text-label-mono text-primary flex items-center gap-2 group/btn">
+                                READ PERSPECTIVE
+                                <span class="material-symbols-outlined transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+</button>
+<span class="material-symbols-outlined text-muted-steel cursor-pointer hover:text-primary">bookmark</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Side Card (4 columns) -->
+<article class="md:col-span-4 stagger-reveal" style="animation-delay: 0.3s;">
+<div class="article-card h-full bg-pure-surface rounded-xl border border-whisper-border overflow-hidden flex flex-col">
+<div class="relative aspect-[4/5] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A minimalist laboratory setting with abstract glassware and glowing crystalline structures under soft, diffused cyan and white lighting. The image captures the essence of scientific discovery with a clean, airy composition and high-key brightness. The color palette focuses on muted steel, charcoal ink, and a single disciplined accent of deep blue." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQFF4SQdBYwgrC0ap8OXPd2B9n2KIf1EtwjStXFWUYh4YqobnXHU7xUxU7slI-kLIa6meCRgI4bAzIXMMMVyi0fedLPFQXOwfsBCvbxT_oVDO2VQkIz0zwLdEbM4L_Pmugd5bMof7bVFgTM-ukOC8FIFUwBMn0NNsaOkylxYYaR1IyMVddeshJfJJYVPMj8h04XfuPcgvqjzwPe9BjKssFKZ9-7N3fgAsbc94aQgHRGQUXsH68qRoW"/>
+<div class="absolute top-6 left-6">
+<span class="bg-surface-container-highest text-on-surface-variant font-label-mono text-label-mono px-3 py-1 rounded-sm uppercase">Science</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md mb-4 leading-tight">Quantum Biology: Deciphering Nature's Hidden Code</h3>
+<p class="text-on-surface-variant mb-6 line-clamp-2">How photosynthesis utilizes quantum coherence to achieve near-perfect energy efficiency.</p>
+<div class="flex items-center justify-between">
+<span class="font-label-mono text-label-mono text-muted-steel">4 MIN READ</span>
+<span class="material-symbols-outlined text-muted-steel cursor-pointer hover:text-primary">bookmark</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Bottom Row - Culture (4 columns) -->
+<article class="md:col-span-4 stagger-reveal" style="animation-delay: 0.4s;">
+<div class="article-card bg-pure-surface rounded-xl border border-whisper-border p-8 h-full flex flex-col">
+<div class="mb-8">
+<span class="font-label-mono text-label-mono text-tertiary uppercase tracking-tighter">Culture</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">The Architecture of Silence</h3>
+<p class="text-on-surface-variant mb-8">Why the next luxury in high-density cities isn't space, but absolute acoustic isolation.</p>
+<div class="mt-auto flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant text-sm">person</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-mono text-[10px] uppercase text-muted-steel">ELARA KOST</span>
+<span class="text-[10px] text-muted-steel">NOV 14, 2024</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Bottom Row - Tech (8 columns) -->
+<article class="md:col-span-8 stagger-reveal" style="animation-delay: 0.5s;">
+<div class="article-card bg-pure-surface rounded-xl border border-whisper-border overflow-hidden grid md:grid-cols-2 h-full">
+<div class="p-8 flex flex-col">
+<div class="mb-4">
+<span class="px-2 py-0.5 rounded bg-surface-container-low text-primary font-label-mono text-[10px] uppercase">Tech Report</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg mb-4">The Silicon Exodus</h3>
+<p class="text-on-surface-variant mb-6">Tracing the migration of hardware engineering from centralized hubs to decentralized global collectives.</p>
+<div class="mt-auto pt-6 flex items-center gap-6">
+<button class="bg-primary text-on-primary px-6 py-3 rounded-full font-label-mono text-label-mono flex items-center gap-2 active:scale-95 transition-transform duration-100">
+                                FULL STORY
+                            </button>
+<span class="text-muted-steel font-label-mono text-label-mono italic">Long-read editorial</span>
+</div>
+</div>
+<div class="relative min-h-[300px] overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="Abstract macro photography of silicon wafers and integrated circuits illuminated by striking blue and violet neon lights. The composition is highly geometric and tech-focused, with a shallow depth of field that creates a sophisticated, modern aesthetic. The mood is intellectual and advanced, fitting a high-end editorial tech report." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCC3Sk5jWG-OdR2puX0Yu7-IeHD_KIjt15XyN1Q7hGNJvJjVRQej3jhszu707fwj3dnSd95sDxOCDY57lyrli8djLCCXtk-zU-e9OmreD5DFg3N-WmUEk3SAFy4BfY_Z4TowcVf08JQ_-UhOZhymRB-In3azN5LNNQvM71-kfZdkfZeYxyZIvChec0J9JF8GfQlae2weB8L7QYdRbDD_ErTInmfErvTeyO0ug9qExi0-hPZWV779HV"/>
+</div>
+</div>
+</article>
+</div>
+<!-- Featured Quote / Atmosphere Break -->
+<section class="my-24 stagger-reveal" style="animation-delay: 0.6s;">
+<div class="relative py-20 px-8 rounded-xl overflow-hidden bg-surface-container-low border border-whisper-border text-center">
+<div class="max-w-reading-column mx-auto">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">format_quote</span>
+<blockquote class="font-headline-lg text-headline-lg italic text-on-surface mb-8">
+                        "Clarity is the ultimate sophisticated weapon against a world drowning in noise."
+                    </blockquote>
+<cite class="font-label-mono text-label-mono text-muted-steel uppercase tracking-widest">— Editorial Manifesto, 2024</cite>
+</div>
+<!-- Subtle Atmosphere Asset -->
 
-      <section class="hero" id="top">
-        <p class="eyebrow">The story that broke this week</p>
-        <h1>She does not sleep. There is nothing to film.</h1>
-        <p class="lede">A 21-year-old college student in Austin runs an OnlyFans account that cleared $43,000 in his first 30 days. The girl on the page doesn't exist. Her name is Maya — 22, UCF psychology dropout, 1,247 paying subscribers. Her top fan paid $1,847 in messages last month. Average revenue per fan: $34. She does not sleep. There is nothing to film. There is no one to type. Claude Code writes every message, manages every conversation, and never takes a day off. The tax bill on $43,000 of fully autonomous income? Zero, if you know where to put it.</p>
-        <div class="heroActions">
-          <a class="button primary" href="/stories/maya-43k-ai-persona">Read the full story</a>
-          <a class="button" href="/markets/">Tax playbook</a>
-        </div>
-      </section>
+</div>
+</section>
+<!-- Secondary Feed Section -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-gutter mb-24 stagger-reveal" style="animation-delay: 0.7s;">
+<div class="md:col-span-3 mb-8 flex items-center gap-4">
+<h2 class="font-headline-md text-headline-md">More Insights</h2>
+<div class="h-px flex-grow bg-whisper-border"></div>
+</div>
+<!-- Mini List Cards -->
+<div class="space-y-8">
+<article class="group cursor-pointer">
+<span class="font-label-mono text-label-mono text-primary mb-2 block">CULTURE</span>
+<h4 class="font-headline-md text-body-lg font-bold group-hover:text-primary transition-colors">The Slow Fashion Manifesto</h4>
+<p class="text-muted-steel text-sm mt-2">Why durability is becoming the new status symbol.</p>
+</article>
+<article class="group cursor-pointer">
+<span class="font-label-mono text-label-mono text-primary mb-2 block">TECH</span>
+<h4 class="font-headline-md text-body-lg font-bold group-hover:text-primary transition-colors">Neural Interface Privacy</h4>
+<p class="text-muted-steel text-sm mt-2">The last frontier of personal data protection.</p>
+</article>
+</div>
+<div class="space-y-8">
+<article class="group cursor-pointer">
+<span class="font-label-mono text-label-mono text-primary mb-2 block">SCIENCE</span>
+<h4 class="font-headline-md text-body-lg font-bold group-hover:text-primary transition-colors">Deep Sea Carbon Capture</h4>
+<p class="text-muted-steel text-sm mt-2">The oceanic solution to terrestrial warming.</p>
+</article>
+<article class="group cursor-pointer">
+<span class="font-label-mono text-label-mono text-primary mb-2 block">POLITICS</span>
+<h4 class="font-headline-md text-body-lg font-bold group-hover:text-primary transition-colors">Digital Direct Democracy</h4>
+<p class="text-muted-steel text-sm mt-2">Lessons from the Estonian e-governance model.</p>
+</article>
+</div>
+<div class="bg-surface-container rounded-xl p-8 flex flex-col justify-between">
+<div>
+<h4 class="font-headline-md text-headline-md mb-4">Stay Fixed.</h4>
+<p class="text-on-surface-variant text-sm mb-6">Receive our curated weekly editorial directly to your inbox.</p>
+<input class="w-full bg-pure-surface border-b border-muted-steel focus:border-primary focus:ring-0 text-sm font-label-mono px-0 py-3 mb-6 transition-colors" placeholder="email@perspective.com" type="email"/>
+</div>
+<button class="w-full bg-on-background text-pure-surface py-3 rounded-lg font-label-mono text-label-mono hover:opacity-90 active:scale-95 transition-all">SUBSCRIBE</button>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="w-full py-12 bg-background border-t border-whisper-border">
+<div class="max-w-reading-column mx-auto flex flex-col items-center gap-4 text-center">
+<div class="text-on-surface-variant font-bold font-headline-md text-headline-md">NewsFixd</div>
+<p class="font-label-mono text-label-mono text-muted-steel">© 2024 NewsFixd. Editorial Clarity.</p>
+<div class="flex gap-6 mt-4">
+<a class="font-label-mono text-label-mono text-muted-steel hover:text-primary underline decoration-primary opacity-80 hover:opacity-100 transition-all" href="/about.html">About</a>
+<a class="font-label-mono text-label-mono text-muted-steel hover:text-primary underline decoration-primary opacity-80 hover:opacity-100 transition-all" href="/privacy.html">Privacy</a>
+<a class="font-label-mono text-label-mono text-muted-steel hover:text-primary underline decoration-primary opacity-80 hover:opacity-100 transition-all" href="/terms.html">Terms</a>
+<a class="font-label-mono text-label-mono text-muted-steel hover:text-primary underline decoration-primary opacity-80 hover:opacity-100 transition-all" href="/feed.xml">RSS</a>
+</div>
+</div>
+</footer>
+<!-- Side Navigation (Web Only - Hidden by default for focal purity) -->
+<aside class="h-screen w-64 fixed left-0 top-0 bg-surface-container-lowest border-r border-whisper-border shadow-sm transform -translate-x-full transition-transform duration-300 z-[60] flex flex-col p-6 space-y-4" id="sideNav">
+<div class="flex justify-between items-center mb-8">
+<span class="font-headline-md text-headline-md text-primary">NewsFixd</span>
+<button class="p-1 hover:bg-surface-container-low rounded" onclick="toggleNav()">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<nav class="flex flex-col space-y-2">
+<a class="flex items-center gap-3 text-primary font-bold bg-surface-container-low rounded-lg p-3 group transition-all" href="#">
+<span class="material-symbols-outlined">newspaper</span>
+<span class="font-label-mono text-label-mono">Latest</span>
+</a>
+<a class="flex items-center gap-3 text-secondary p-3 hover:bg-surface-container-high rounded-lg group transition-all translate-x-0 active:translate-x-1 duration-200" href="#">
+<span class="material-symbols-outlined">trending_up</span>
+<span class="font-label-mono text-label-mono">Trending</span>
+</a>
+<a class="flex items-center gap-3 text-secondary p-3 hover:bg-surface-container-high rounded-lg group transition-all translate-x-0 active:translate-x-1 duration-200" href="#">
+<span class="material-symbols-outlined">bookmark</span>
+<span class="font-label-mono text-label-mono">Saved</span>
+</a>
+<a class="flex items-center gap-3 text-secondary p-3 hover:bg-surface-container-high rounded-lg group transition-all translate-x-0 active:translate-x-1 duration-200" href="#">
+<span class="material-symbols-outlined">grid_view</span>
+<span class="font-label-mono text-label-mono">Topics</span>
+</a>
+<a class="flex items-center gap-3 text-secondary p-3 hover:bg-surface-container-high rounded-lg group transition-all translate-x-0 active:translate-x-1 duration-200 mt-auto" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-label-mono text-label-mono">Settings</span>
+</a>
+</nav>
+<button class="mt-8 bg-primary text-on-primary py-3 rounded-lg font-label-mono text-label-mono">Subscribe</button>
+</aside>
+<script>
+        function toggleNav() {
+            const nav = document.getElementById('sideNav');
+            nav.classList.toggle('-translate-x-full');
+        }
 
-      <section class="section" id="latest">
-        <div class="sectionHeader">
-          <div>
-            <p class="eyebrow">Latest</p>
-            <h2 class="sectionTitle">AI personas, revenue breakdowns, tax strategies</h2>
-          </div>
-          <p class="meta">New perspectives every week on autonomous income that works while you sleep.</p>
-        </div>
-        <div class="threeCol">
+        // Simple scroll interaction for the header
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            const header = document.querySelector('header');
+            if (currentScroll > lastScroll && currentScroll > 100) {
+                header.style.transform = 'translateY(-100%)';
+            } else {
+                header.style.transform = 'translateY(0)';
+            }
+            lastScroll = currentScroll;
+        });
 
-          <article class="miniCard">
-            <h4><a href="/markets/ai-personas-passive-income-tax-strategy-2025">Run 5 AI Personas, Pay 15% Tax: The Playbook</a></h4>
-            <p>How to build autonomous revenue with AI personas and slash your tax bill using digital entrepreneur strategies. No fluff, just numbers.</p>
-          </article>
-
-          <article class="miniCard">
-            <h4><a href="/business/ai-persona-passive-income-tax-strategy">How to Build 5 AI Personas That Pay You $2,000/Month Each (Tax-Free)</a></h4>
-            <p>Learn to create autonomous AI personas generating $10k/month in passive income, with tax strategies to keep 90% of earnings.</p>
-          </article>
-
-          <article class="miniCard">
-            <h4><a href="/tech/ai-personas-untaxed-passive-income-2025">How I Run 12 AI Personas for $47k/Month (And Pay 11% Tax)</a></h4>
-            <p>Build AI personas for passive income and cut your tax bill to single digits. Real numbers, no fluff.</p>
-          </article>
-
-          <article class="miniCard">
-            <h4><a href="/markets/ai-persona-tax-optimization-strategy">5 Tax Moves That Slash Your AI Persona Income Bill by 40%</a></h4>
-            <p>Stop overpaying taxes on your AI persona income. Here are 5 specific strategies to keep more of what you earn, legally.</p>
-          </article>
-
-          <article class="miniCard">
-            <h4><a href="/business/build-ai-personas-that-pay-taxes-like-a-hedge-fund">Build AI Personas That Pay Taxes Like a Hedge Fund</a></h4>
-            <p>Stop overpaying taxes on AI income. Learn how to structure AI personas as independent entities for maximum tax efficiency.</p>
-          </article>
-
-          <article class="miniCard">
-            <h4><a href="/tech/ai-persona-tax-strategy-autonomous-income">How to Build 5 AI Personas and Pay 15% Tax on the Income</a></h4>
-            <p>Build AI personas for autonomous income streams and cut your tax bill to 15% with smart entity structures. Numbers inside.</p>
-          </article>
-
-          <article class="miniCard">
-            <h4><a href="/business/ai-personas-passive-income-tax-strategy">How to Run 5 AI Personas for Passive Income and Pay Zero Tax Legally</a></h4>
-            <p>Build autonomous AI personas for passive income streams and optimize taxes. Specific numbers, steps, and tax strategies for digital entrepreneurs.</p>
-          </article>
-
-          <article class="miniCard">
-            <h4><a href="/tech/build-ai-personas-for-autonomous-income-tax-strategies">How to Build AI Personas That Print Money While You Sleep (and Keep the Tax Man Happy)</a></h4>
-            <p>Learn to create AI personas for passive income streams and optimize taxes for digital entrepreneurs. Real numbers, no fluff.</p>
-          </article>
-
-          <article class="miniCard">
-            <h4><a href="/markets/ai-personas-self-employment-tax-savings-2025">How AI Personas Slash Your Self-Employment Tax by 30%: The 2025 Playbook</a></h4>
-            <p>Leverage AI personas to legally reduce self-employment tax by 30%. Specific strategies, numbers, and steps for digital entrepreneurs.</p>
-          </article>
-
-          <article class="miniCard">
-            <h4><a href="/business/build-ai-persona-tax-machine-passive-income">How to Build an AI Persona That Pays Your Taxes</a></h4>
-            <p>Learn to create an autonomous AI persona that generates passive income and optimizes your tax strategy with real numbers and steps.</p>
-          </article>
-
-          <article class="miniCard">
-            <h4><a href="/tech/ai-personas-passive-income-tax-optimization">How to Launch 5 AI Personas and Keep 85% of the Income</a></h4>
-            <p>Build autonomous revenue with AI personas and cut your tax bill by 30-40%. Real numbers, no fluff.</p>
-          </article>
-
-          <article class="miniCard">
-            <h4><a href="/markets/ai-personas-tax-strategy-autonomous-income">How to Run 10 AI Personas and Pay Zero Tax (Legally)</a></h4>
-            <p>Deploy AI personas for passive income. Use these 5 tax strategies to keep 100% of your digital revenue. No fluff, just numbers.</p>
-          </article>
-
-          <article class="miniCard">
-            <h4><a href="/business/ai-personas-automate-tax-free-income">How AI Personas Can Automate $10K/Month — Tax-Free</a></h4>
-            <p>Learn to build AI personas that generate passive income and optimize taxes. Real numbers, steps, and strategy inside.</p>
-          </article>
-
-          <article class="miniCard">
-            <h4><a href="/tech/build-an-army-of-ai-personas-for-passive-income-2024">Build an Army of AI Personas: $10k/Month Passive Income in 2024</a></h4>
-            <p>Learn how to deploy AI personas for autonomous income streams. Tax strategies for digital entrepreneurs included. Real numbers, no BS.</p>
-          </article>
-
-          <article class="miniCard">
-            <h4><a href="/markets/ai-persona-tax-hack-save-thousands">Your AI Personas Are Earning: Here's How to Keep the IRS Out of Your Cut</a></h4>
-            <p>Stop overpaying taxes on AI-generated income. Learn the specific strategies digital entrepreneurs use to save thousands with autonomous revenue systems.</p>
-          </article>
-
-          <article class="miniCard">
-            <h4><a href="/tech/build-ai-personas-for-autonomous-income-tax-strategy">3 AI Personas That Print Money While You Sleep: Tax Strategy Included</a></h4>
-            <p>Learn how to deploy AI personas for passive income streams and optimize taxes for digital entrepreneurs. Specific numbers and steps inside.</p>
-          </article>
-
-          <article class="miniCard">
-            <h4><a href="/markets/tax-strategy-for-ai-personas-passive-income">How to Slash Your Tax Bill by 40% Using AI Personas</a></h4>
-            <p>Learn tax optimization strategies for AI-generated personas and passive income streams. Save thousands with specific steps and numbers.</p>
-          </article>
-
-          <article class="miniCard">
-            <h4><a href="/business/ai-personas-passive-income-tax-strategy">How I Built 5 AI Personas That Pay Me $8,400/Month (Tax-Free)</a></h4>
-            <p>Learn to create AI personas for passive income, optimize taxes, and keep more of your digital earnings. Real numbers, no BS.</p>
-          </article>
-
-          <article class="miniCard">
-            <h4><a href="/tech/ai-personas-tax-strategy-side-hustle-empire">3 AI Personas That Cut Your Tax Bill by 40%</a></h4>
-            <p>Build autonomous income streams with AI personas and slash taxes. Real numbers, no fluff.</p>
-          </article>
-
-          <article class="miniCard">
-            <h4><a href="/markets/ai-personas-tax-strategy-autonomous-income">3 Tax Moves for Your AI Persona Side Hustle That Save $5,000+</a></h4>
-            <p>Stop overpaying taxes on AI-generated income. Learn specific strategies for autonomous revenue, from LLCs to deductions.</p>
-          </article>
-
-          <article class="miniCard">
-            <h4><a href="/business/ai-persona-tax-strategy-passive-income">7 AI Personas, 1 Tax Strategy: How to Keep 70% of Your Autonomous Income</a></h4>
-            <p>Cut your tax bill by 30% with AI personas. Real numbers, no fluff. A Marine's guide to digital entrepreneur tax optimization.</p>
-          </article>
-
-          <article class="miniCard">
-            <h4><a href="/tech/build-ai-personas-that-file-taxes-and-make-money">Build AI Personas That File Taxes and Make Money: The 2024 Playbook</a></h4>
-            <p>Learn to create AI personas for passive income, automate tax filings, and keep 70%+ of your earnings. Real numbers, no fluff.</p>
-          </article>
-
-          <article class="miniCard">
-            <h4><a href="/markets/ai-persona-tax-deductions-autonomous-income">5 Tax Deductions for Your AI Persona Side Hustle That Save You $12K</a></h4>
-            <p>Learn how to maximize tax deductions for AI-generated personas and autonomous income streams. Save $12k+ with these specific strategies.</p>
-          </article>
-
-          <article class="miniCard">
-            <h4><a href="/business/build-ai-persona-empire-slash-tax-bill">How to Build 5 AI Personas and Cut Your Tax Bill by 40%</a></h4>
-            <p>Deploy AI personas for passive income. Then use LLCs and solo 401(k)s to slash taxes. Real numbers inside.</p>
-          </article>
-
-          <article class="miniCard">
-            <h4><a href="/tech/build-an-army-of-ai-personas-for-passive-income">Build an Army of AI Personas: $5k/Month Passive Income with Zero Face Time</a></h4>
-            <p>Learn to deploy AI-generated personas for autonomous income streams, cut taxes with digital entity strategies, and scale to $5k/month.</p>
-          </article>
-
-          <article class="miniCard">
-            <h4><a href="/markets/tax-strategy-for-ai-persona-income-streams">How to Tax-Optimize Your AI Persona Side Hustle: 3 Steps to Keep More Cash</a></h4>
-            <p>Stop overpaying taxes on your AI-generated persona income. Learn specific strategies to deduct expenses, structure entities, and save thousands.</p>
-          </article>
-
-          <article class="miniCard">
-            <h4><a href="/business/ai-personas-autonomous-income-tax-strategy">How to Build 5 AI Personas That Print $10k/Month While Paying 15% Tax</a></h4>
-            <p>Deploy AI personas for passive income, then slash your tax bill to 15% using LLCs, SEP IRAs, and Section 199A. Numbers inside.</p>
-          </article>
-
-          <article class="miniCard">
-            <h4><a href="/tech/ai-personas-tax-playbook-autonomous-income">How to Build 5 AI Personas and Pay 0% Tax on the Income</a></h4>
-            <p>Deploy AI personas for passive income, then use legal tax strategies to keep every dollar. Numbers inside.</p>
-          </article>
-
-          <article class="miniCard">
-            <h4><a href="/business/ai-persona-passive-income-tax-strategy">How I Built 3 AI Personas That Pay Me $8,400/Month — Tax-Free</a></h4>
-            <p>Turn AI personas into passive income machines. Learn the tax strategy that keeps 100% of your digital earnings. No fluff, just numbers.</p>
-          </article>
-
-          <article class="miniCard">
-            <h4><a href="/markets/ai-persona-tax-strategy-1099-deductions">Your AI Personas Are Making Money: Here's How to Tax-Optimize the Hell Out of Them</a></h4>
-            <p>Stop overpaying taxes on AI persona income. Learn the specific deductions, entity structures, and quarterly strategies that keep more cash in your pocket.</p>
-          </article>
-
-          <article class="miniCard">
-            <h4><a href="/tech/build-ai-personas-that-pay-you-while-you-sleep-tax-strategies">Build 3 AI Personas That Pay You $2,400/Month While You Sleep — Tax-Free</a></h4>
-            <p>Learn how to deploy AI personas for passive income, then keep 100% of profits with smart tax strategies for digital entrepreneurs.</p>
-          </article>
-
-          <article class="miniCard">
-            <h4><a href="/tech/">AI personas →</a></h4>
-            <p>Maya earned $43K in 30 days — no filming, no typing, no sleep. The full breakdown of how an AI persona runs a revenue stream on autopilot with Claude Code.</p>
-          </article>
-
-          <article class="miniCard">
-            <h4><a href="/business/">Money →</a></h4>
-            <p>$43K gross, $34/fan/month, $0 CAC. The unit economics behind AI-generated OnlyFans revenue and how to scale from 1 persona to 10.</p>
-          </article>
-
-          <article class="miniCard">
-            <h4><a href="/markets/">Tax →</a></h4>
-            <p>How that $43K becomes $1,530 in federal tax. The S-Corp election, Solo 401(k), Section 179, and every write-off that keeps the government out of your revenue.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section" id="hubs">
-        <div class="sectionHeader">
-          <div>
-            <p class="eyebrow">Three lanes, one game</p>
-            <h2 class="sectionTitle">Money that works while you sleep</h2>
-          </div>
-          <p class="meta">Build it, run it, keep it. The complete playbook for AI-generated autonomous income.</p>
-        </div>
-        <div class="threeCol">
-
-          <article class="miniCard">
-            <h4><a href="./tech/index.html">AI Personas</a></h4>
-            <p>How Maya works under the hood. The tech stack — Claude Code, Stable Diffusion, ElevenLabs. How one operator runs multiple AI personas generating $43K/mo each with zero human labor.</p>
-          </article>
-
-          <article class="miniCard">
-            <h4><a href="./business/index.html">Money</a></h4>
-            <p>The business numbers. Revenue per fan, top spender profiles, churn rates, scaling math. From one persona to a portfolio that clears $5M/year.</p>
-          </article>
-
-          <article class="miniCard">
-            <h4><a href="./markets/index.html">Tax</a></h4>
-            <p>Zero income tax on $43K of AI revenue. The S-Corp structure, retirement shields, Section 179 depreciation, and every deduction that applies to a tech-based autonomous income business.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section newsletter-section" id="newsletter">
-        <div class="sectionHeader">
-          <div>
-            <p class="eyebrow">Subscribe</p>
-            <h2 class="sectionTitle">One email a week. No fluff.</h2>
-          </div>
-          <p class="meta">AI persona builds, revenue breakdowns, tax strategies — straight to your inbox.</p>
-        </div>
-        <div class="newsletter-box">
-          <form class="subscribe-form" action="/api/subscribe" method="POST">
-            <input type="email" name="email" placeholder="your@email.com" required class="subscribe-input">
-            <input type="hidden" name="source" value="newsfixd-home">
-            <button type="submit" class="button primary subscribe-btn">Subscribe</button>
-          </form>
-          <p class="subscribe-note">No spam. One email a week. Unsubscribe anytime.</p>
-        </div>
-      </section>
-    </main>
-    <footer class="footer wrap">
-      <p>NewsFixd covers AI personas, autonomous income, and tax strategy. Nothing on this site is financial or legal advice. Do your own research.</p>
-    </footer>
-  </div>
-</body>
-</html>
+        // Micro-interaction: Active scale on buttons
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('mousedown', () => btn.classList.add('scale-95'));
+            btn.addEventListener('mouseup', () => btn.classList.remove('scale-95'));
+            btn.addEventListener('mouseleave', () => btn.classList.remove('scale-95'));
+        });
+    </script>
+<script src="/site.js"></script>
+</body></html>

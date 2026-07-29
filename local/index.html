@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Local News | NewsFixd</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-container": "#bc4800",
+                    "canvas-white": "#F9FAFB",
+                    "surface": "#faf8ff",
+                    "on-error": "#ffffff",
+                    "secondary-fixed-dim": "#c8c5ca",
+                    "primary-fixed-dim": "#b4c5ff",
+                    "muted-steel": "#71717A",
+                    "primary-fixed": "#dbe1ff",
+                    "surface-container-highest": "#e1e2ed",
+                    "inverse-surface": "#2e3039",
+                    "on-error-container": "#93000a",
+                    "inverse-primary": "#b4c5ff",
+                    "on-surface-variant": "#434655",
+                    "on-primary-fixed": "#00174b",
+                    "on-secondary-fixed-variant": "#47464a",
+                    "on-tertiary": "#ffffff",
+                    "secondary-fixed": "#e4e1e6",
+                    "secondary": "#5f5e61",
+                    "tertiary-fixed-dim": "#ffb596",
+                    "surface-bright": "#faf8ff",
+                    "on-background": "#191b23",
+                    "inverse-on-surface": "#f0f0fb",
+                    "tertiary": "#943700",
+                    "on-primary-fixed-variant": "#003ea8",
+                    "primary-container": "#2563eb",
+                    "outline-variant": "#c3c6d7",
+                    "on-secondary": "#ffffff",
+                    "surface-container": "#ededf9",
+                    "on-secondary-container": "#656467",
+                    "on-surface": "#191b23",
+                    "whisper-border": "rgba(226, 232, 240, 0.5)",
+                    "pure-surface": "#FFFFFF",
+                    "on-primary": "#ffffff",
+                    "on-secondary-fixed": "#1b1b1e",
+                    "surface-container-low": "#f3f3fe",
+                    "surface-container-high": "#e7e7f3",
+                    "error-container": "#ffdad6",
+                    "surface-tint": "#0053db",
+                    "on-tertiary-fixed": "#360f00",
+                    "surface-dim": "#d9d9e5",
+                    "on-primary-container": "#eeefff",
+                    "primary": "#004ac6",
+                    "outline": "#737686",
+                    "on-tertiary-container": "#ffede6",
+                    "error": "#ba1a1a",
+                    "surface-variant": "#e1e2ed",
+                    "tertiary-fixed": "#ffdbcd",
+                    "on-tertiary-fixed-variant": "#7d2d00",
+                    "background": "#faf8ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "1rem",
+                    "margin-desktop": "2.5rem",
+                    "gutter": "1.5rem",
+                    "reading-column": "720px",
+                    "max-width": "1280px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "label-mono": ["JetBrains Mono"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "headline-xl-mobile": ["Plus Jakarta Sans"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "headline-xl": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-mono": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-xl-mobile": ["40px", {"lineHeight": "1.1", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-xl": ["56px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        .gallery-asymmetry-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 1.5rem;
+        }
+
+        .scroll-hide::-webkit-scrollbar { display: none; }
+        .scroll-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+        .reveal-stagger > * {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: springReveal 0.8s cubic-bezier(0.17, 0.67, 0.43, 1.05) forwards;
+        }
+        
+        @keyframes springReveal {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .reveal-stagger > *:nth-child(1) { animation-delay: 0.1s; }
+        .reveal-stagger > *:nth-child(2) { animation-delay: 0.2s; }
+        .reveal-stagger > *:nth-child(3) { animation-delay: 0.3s; }
+        .reveal-stagger > *:nth-child(4) { animation-delay: 0.4s; }
+    </style>
+</head>
+<body class="bg-canvas-white text-on-background font-body-md antialiased scroll-smooth">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky z-50 bg-canvas-white dark:bg-on-background transition-all duration-300">
+<div class="max-w-max-width mx-auto px-margin-desktop flex items-center justify-between h-20">
+<div class="flex items-center gap-12">
+<a class="font-headline-md text-headline-md font-bold text-primary dark:text-inverse-primary tracking-tight" href="/">NewsFixd</a>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-body-md text-primary dark:text-inverse-primary border-b-2 border-primary pb-1" href="/local/">Local</a>
+<a class="font-body-md text-muted-steel dark:text-secondary-fixed-dim hover:text-primary transition-colors" href="/global/">Global</a>
+<a class="font-body-md text-muted-steel dark:text-secondary-fixed-dim hover:text-primary transition-colors" href="/newsletter/">Newsletters</a>
+<a class="font-body-md text-muted-steel dark:text-secondary-fixed-dim hover:text-primary transition-colors" href="/business/">Business</a>
+<a class="font-body-md text-muted-steel dark:text-secondary-fixed-dim hover:text-primary transition-colors" href="#">Culture</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<button class="hover:opacity-80 transition-opacity active:scale-95 duration-200 ease-out">
+<span class="material-symbols-outlined text-on-background">search</span>
+</button>
+<button class="hover:opacity-80 transition-opacity active:scale-95 duration-200 ease-out">
+<span class="material-symbols-outlined text-on-background">bookmark</span>
+</button>
+<button class="hover:opacity-80 transition-opacity active:scale-95 duration-200 ease-out">
+<span class="material-symbols-outlined text-on-background">account_circle</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-max-width mx-auto px-margin-desktop py-12">
+<!-- Local Header Section -->
+<section class="mb-16 reveal-stagger">
+<div class="flex flex-col md:flex-row justify-between items-end gap-6 mb-8">
+<div>
+<span class="font-label-mono text-label-mono text-muted-steel uppercase tracking-widest block mb-2">Location Context</span>
+<h1 class="font-headline-xl text-headline-xl text-on-background max-w-2xl">Santa Cruz, <span class="text-primary italic">Archives</span>.</h1>
+</div>
+<div class="flex items-center gap-4 pb-2">
+<div class="flex -space-x-3">
+<div class="w-10 h-10 rounded-full border-2 border-canvas-white overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A close-up portrait of a professional female journalist with glasses and a friendly expression, set against a blurred, airy, minimalist newsroom background with soft, cool lighting. The style is modern editorial with high-end digital photography clarity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4UqUycibwI65m769qvwLn7Ayd4lZSArc1MUs_NW0AbaQP8m1GU6bcCXe1s3Q2M64UyBoF5uK08Skxw4f_zD8GhUiQ-ZYicbyu9QG3p3S-PBJVrtzlsi5HGFzlGJd5NvYrCY-IzGXnZ1nIQ0JLR80aEnZnzlEFrchiws7bOMz8JBUNGO90RxRZl3TCVFgLRytuEauI1fZZwQ40rDGsxX1C_ZvJI6U0wOHIU8Y0ML_89NqvxNjMwPEc"/>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-canvas-white overflow-hidden bg-primary text-white flex items-center justify-center font-label-mono">
+                            +12
+                        </div>
+</div>
+<span class="font-label-mono text-label-mono text-muted-steel">Verified Contributors</span>
+</div>
+</div>
+<div class="w-full h-px bg-whisper-border"></div>
+</section>
+<!-- Featured Asymmetric Grid -->
+<section class="gallery-asymmetry-grid mb-24 reveal-stagger">
+<!-- Main Story (8 Cols) -->
+<article class="col-span-12 lg:col-span-8 group cursor-pointer">
+<div class="relative overflow-hidden rounded-xl mb-6 aspect-[16/9] bg-surface-container-high transition-all duration-500 group-hover:shadow-lg">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A wide, cinematic shot of the Santa Cruz coastline during a foggy sunrise. The Pacific ocean waves crash against rugged cliffs under a soft, muted pastel sky. The image has a clean, airy editorial quality with high contrast and sophisticated, natural tones that emphasize the quiet beauty of the local landscape." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqjRRKnY9A2cOqDnNnGaSELyJzxKLvP3jR3W1HyMoWDetNLUdk5k1zTXVPSaz3aWo7bRI3awhU4t2Cndne50Tqgw7TvRN33mCx6ofJ0sqpxBNQMMtf0h_XydyJf0U9zD7Sz5MpKcDnqP5vL9uzL4Kyjcyt9OR-u6si6QXoKEdakvMMEcNvsLzzg4IvDMFwZVIyBjRZ0bAF4k5W0lemYz7Bmy3iKv9UBOE7Vj1fd3Ts3QeUcMioR5f9"/>
+<div class="absolute top-4 left-4">
+<span class="bg-canvas-white px-3 py-1 font-label-mono text-label-mono rounded-full border border-whisper-border">Feature Report</span>
+</div>
+</div>
+<div class="max-w-2xl">
+<div class="flex items-center gap-3 mb-3">
+<span class="font-label-mono text-label-mono text-primary">Environmental Politics</span>
+<span class="w-1 h-1 rounded-full bg-muted-steel"></span>
+<span class="font-label-mono text-label-mono text-muted-steel uppercase">10h ago</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg mb-4 group-hover:text-primary transition-colors">The shifting coastline: How local municipalities are reimagining urban planning.</h2>
+<p class="font-body-lg text-body-lg text-secondary mb-6 leading-relaxed">As rising sea levels threaten coastal infrastructure, Santa Cruz becomes a testing ground for experimental ecological buffers and community-led relocation strategies.</p>
+<div class="flex items-center gap-2">
+<span class="font-label-mono text-label-mono text-on-background font-bold">By Elena Vance</span>
+<span class="text-muted-steel">/</span>
+<span class="font-label-mono text-label-mono text-muted-steel">8 min read</span>
+</div>
+</div>
+</article>
+<!-- Secondary Story (4 Cols) -->
+<article class="col-span-12 lg:col-span-4 group cursor-pointer">
+<div class="relative overflow-hidden rounded-xl mb-4 aspect-[4/5] bg-surface-container-high transition-all duration-500 group-hover:shadow-lg">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="An interior shot of a minimalist, modern bakery in Santa Cruz. Soft morning light filters through large windows, illuminating flour-dusted wooden surfaces and artisanal sourdough loaves on shelves. The aesthetic is warm yet incredibly clean and sophisticated, focusing on textures and high-key brightness with charcoal accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkO3sNnZrVsBf8AcvMaPGPeKTw0_s0AT1ZzT_218V7Bqei-TAS178HTn4cLcCAz4UCY1eMgFs1RwPVB2Asm6fHehGYw4yHPCKKRWVHEmoHvIrF_jxY_YdkCpY8c_5oG_5RcmFx9OvqQrs7hb8HueOVN0eR4rSYEMsNoIJCCdnNytEaYyYqG8qEcHdOIveUZuSMM7mvNsVLNl5Y6lOEucVhuTzhdMWiyP8Ps7a0zKkRZNdUb2JO-Gjb"/>
+</div>
+<div class="flex items-center gap-3 mb-2">
+<span class="font-label-mono text-label-mono text-primary">Community Culture</span>
+<span class="font-label-mono text-label-mono text-muted-steel uppercase">Yesterday</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2 group-hover:text-primary transition-colors">The Sourdough Renaissance.</h3>
+<p class="font-body-md text-body-md text-secondary line-clamp-3">A profile on the three bakeries defining the new wave of Pacific fermentation and local grain sourcing.</p>
+</article>
+</section>
+<!-- Verified Local Businesses (Horizontal Gallery) -->
+<section class="mb-24">
+<div class="flex items-center justify-between mb-8">
+<h3 class="font-headline-md text-headline-md">Verified Local Businesses</h3>
+<a class="font-label-mono text-label-mono text-primary flex items-center gap-1 group" href="#">
+                    View Registry 
+                    <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="flex overflow-x-auto scroll-hide gap-6 pb-4 -mx-4 px-4">
+<!-- Business Card 1 -->
+<div class="min-w-[280px] p-6 rounded-xl bg-pure-surface border border-whisper-border hover:shadow-sm transition-all duration-300">
+<div class="w-12 h-12 rounded-lg bg-surface-container-low flex items-center justify-center mb-4 text-primary">
+<span class="material-symbols-outlined">coffee</span>
+</div>
+<h4 class="font-headline-md text-[18px] mb-1">Verve Coffee Roasters</h4>
+<p class="font-label-mono text-label-mono text-muted-steel mb-4 uppercase">Downtown SC</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 rounded-full border border-whisper-border font-label-mono text-[10px] text-muted-steel">Ethical Sourcing</span>
+<span class="px-3 py-1 rounded-full border border-whisper-border font-label-mono text-[10px] text-muted-steel">Community Hub</span>
+</div>
+</div>
+<!-- Business Card 2 -->
+<div class="min-w-[280px] p-6 rounded-xl bg-pure-surface border border-whisper-border hover:shadow-sm transition-all duration-300">
+<div class="w-12 h-12 rounded-lg bg-surface-container-low flex items-center justify-center mb-4 text-primary">
+<span class="material-symbols-outlined">menu_book</span>
+</div>
+<h4 class="font-headline-md text-[18px] mb-1">Bookshop Santa Cruz</h4>
+<p class="font-label-mono text-label-mono text-muted-steel mb-4 uppercase">Pacific Ave</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 rounded-full border border-whisper-border font-label-mono text-[10px] text-muted-steel">Literary Archive</span>
+<span class="px-3 py-1 rounded-full border border-whisper-border font-label-mono text-[10px] text-muted-steel">Historic</span>
+</div>
+</div>
+<!-- Business Card 3 -->
+<div class="min-w-[280px] p-6 rounded-xl bg-pure-surface border border-whisper-border hover:shadow-sm transition-all duration-300">
+<div class="w-12 h-12 rounded-lg bg-surface-container-low flex items-center justify-center mb-4 text-primary">
+<span class="material-symbols-outlined">palette</span>
+</div>
+<h4 class="font-headline-md text-[18px] mb-1">Tannery Arts Center</h4>
+<p class="font-label-mono text-label-mono text-muted-steel mb-4 uppercase">River St</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 rounded-full border border-whisper-border font-label-mono text-[10px] text-muted-steel">Local Art</span>
+<span class="px-3 py-1 rounded-full border border-whisper-border font-label-mono text-[10px] text-muted-steel">Studio Space</span>
+</div>
+</div>
+<!-- Business Card 4 -->
+<div class="min-w-[280px] p-6 rounded-xl bg-pure-surface border border-whisper-border hover:shadow-sm transition-all duration-300">
+<div class="w-12 h-12 rounded-lg bg-surface-container-low flex items-center justify-center mb-4 text-primary">
+<span class="material-symbols-outlined">restaurant</span>
+</div>
+<h4 class="font-headline-md text-[18px] mb-1">The Penny Ice Creamery</h4>
+<p class="font-label-mono text-label-mono text-muted-steel mb-4 uppercase">Cedar St</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 rounded-full border border-whisper-border font-label-mono text-[10px] text-muted-steel">Scratch Made</span>
+<span class="px-3 py-1 rounded-full border border-whisper-border font-label-mono text-[10px] text-muted-steel">Seasonal</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Long-form Reporting (Center Column) -->
+<section class="max-w-reading-column mx-auto mb-24 reveal-stagger">
+<div class="text-center mb-16">
+<h3 class="font-headline-xl text-headline-lg mb-4">Deep Reporting</h3>
+<p class="font-body-lg text-secondary">In-depth investigations into the fabric of our city.</p>
+</div>
+<div class="space-y-20">
+<article class="group cursor-pointer">
+<div class="flex flex-col md:flex-row gap-8">
+<div class="w-full md:w-1/3 aspect-[4/3] rounded-lg overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A macro photograph of redwood bark with morning dew drops, capturing the intricate textures and deep earthy colors of the Santa Cruz forest. The lighting is soft and natural, emphasizing a serene, contemplative mood within a modern, minimalist frame." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3nJSkgtYHa82b8SGwi0T1J0GFA65IGI7GMZQeDeAZ4nWXQAQ7ZJ2mw0QeEdH8ct5ToPn5fkW23QF2VijRf0aJ25lcq55d9FYaXVj8dDQ_rb-pWyl-CmZYywmivj4g3-gtaNU8qFMbIKRoBR0fFnP8x3Miey6yS6hLa6UMRK-PVyzaHNQpdCKv5i0i4UzJ1vXIKnaO0PuBkvmsF00gjPFPwlTizpLfZGsh6_Msb9cELf1iFoSev0wS"/>
+</div>
+<div class="w-full md:w-2/3">
+<span class="font-label-mono text-label-mono text-muted-steel block mb-2 uppercase">The Housing Files / Part 1</span>
+<h4 class="font-headline-md text-headline-md mb-3 group-hover:text-primary transition-colors">The Hidden Costs of Paradise.</h4>
+<p class="font-body-md text-secondary mb-4">An investigative look at how property speculation is reshaping the neighborhood dynamics of the Westside.</p>
+<span class="font-label-mono text-label-mono text-primary font-bold">Read Investigation →</span>
+</div>
+</div>
+</article>
+<article class="group cursor-pointer">
+<div class="flex flex-col md:flex-row-reverse gap-8">
+<div class="w-full md:w-1/3 aspect-[4/3] rounded-lg overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A high-contrast black and white architectural shot of a modern glass and steel building reflecting a stormy sky. The lines are sharp and geometric, evoking a sense of sophistication and professional journalism. The overall tone is cool and intellectually grounded." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAG285jQV5xaPEUtUfjeVCH7d1Wa_RvGkPQBu4LwAlGPfvleoqP9RniVAo1S0Ohm7B_F52azgpD3oCDIoga-lBVlA9FdoQL9WevMXB9HjrsX0XLLtj8keZCBMT0-_13HN40wetZv-p0IaiM0VlAyEIeDxcgr3AEulz2WA5Naik32uaMo8AVVdMiEELKf4Nj46QKhDGStToBSre463ePL4X5oyYP8kLA5FPJT3fv3k5DdKLfcUt8xcwR"/>
+</div>
+<div class="w-full md:w-2/3 md:text-right">
+<span class="font-label-mono text-label-mono text-muted-steel block mb-2 uppercase">Infrastructure / Update</span>
+<h4 class="font-headline-md text-headline-md mb-3 group-hover:text-primary transition-colors">The Future of Highway 1.</h4>
+<p class="font-body-md text-secondary mb-4">Understanding the multi-decade expansion plan and its potential impact on local commute times and wildlife corridors.</p>
+<span class="font-label-mono text-label-mono text-primary font-bold">Read Investigation →</span>
+</div>
+</div>
+</article>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 bg-canvas-white dark:bg-on-background border-t border-whisper-border">
+<div class="max-w-max-width mx-auto px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-gutter">
+<div class="flex flex-col items-center md:items-start gap-4">
+<span class="font-headline-md text-headline-md font-bold text-primary">NewsFixd</span>
+<p class="font-body-md text-body-md text-muted-steel">© 2024 NewsFixd. Curated Editorial Excellence.</p>
+</div>
+<div class="flex gap-8">
+<a class="font-body-md text-body-md text-muted-steel hover:text-primary transition-colors" href="/about.html">About</a>
+<a class="font-body-md text-body-md text-muted-steel hover:text-primary transition-colors" href="/privacy.html">Privacy</a>
+<a class="font-body-md text-body-md text-muted-steel hover:text-primary transition-colors" href="/terms.html">Terms</a>
+<a class="font-body-md text-body-md text-muted-steel hover:text-primary transition-colors" href="#">Support</a>
+</div>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 w-full z-50 md:hidden bg-canvas-white dark:bg-on-background border-t border-whisper-border shadow-sm">
+<div class="flex justify-around items-center h-16 px-margin-mobile">
+<a class="flex flex-col items-center justify-center text-primary dark:text-inverse-primary active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-label-mono text-label-mono uppercase tracking-widest mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-muted-steel dark:text-secondary-fixed-dim hover:bg-surface-container-low active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">explore</span>
+<span class="font-label-mono text-label-mono uppercase tracking-widest mt-1">Discover</span>
+</a>
+<a class="flex flex-col items-center justify-center text-muted-steel dark:text-secondary-fixed-dim hover:bg-surface-container-low active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">bookmark</span>
+<span class="font-label-mono text-label-mono uppercase tracking-widest mt-1">Saved</span>
+</a>
+<a class="flex flex-col items-center justify-center text-muted-steel dark:text-secondary-fixed-dim hover:bg-surface-container-low active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-mono text-label-mono uppercase tracking-widest mt-1">Profile</span>
+</a>
+</div>
+</nav>
+<script>
+        // Micro-interactions and scroll handling
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.querySelector('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('shadow-sm', 'bg-white/80', 'backdrop-blur-md');
+                } else {
+                    header.classList.remove('shadow-sm', 'bg-white/80', 'backdrop-blur-md');
+                }
+            });
+
+            // Intersection Observer for stagger reveal
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal-stagger').forEach(el => observer.observe(el));
+        });
+    </script>
+<script src="/site.js"></script>
+</body></html>
