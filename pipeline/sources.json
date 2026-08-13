@@ -1,0 +1,14 @@
+[
+  {
+    "id": "newsfixd-original",
+    "name": "NewsFixd Original Reporting",
+    "feedUrl": "",
+    "homepage": "https://newsfixd.com",
+    "rights": "owned",
+    "licenseReference": "NewsFixd commissioned or staff-created work",
+    "allowFullText": true,
+    "defaultCategory": "Local",
+    "defaultLocation": "Atlanta, GA",
+    "enabled": false
+  }
+]

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Science, Climate & Discovery | NewsFixd</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Using Plus Jakarta Sans as it closely matches the Satoshi aesthetic requested and is in the config -->
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .tracking-tight-custom {
+            letter-spacing: -0.04em;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(8px);
+        }
+        .asymmetric-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 1.5rem;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "error-container": "#ffdad6",
+                      "secondary-fixed-dim": "#c8c5ca",
+                      "surface-dim": "#d9d9e5",
+                      "tertiary-fixed": "#ffdbcd",
+                      "on-secondary-fixed": "#1b1b1e",
+                      "primary-container": "#2563eb",
+                      "on-primary": "#ffffff",
+                      "outline-variant": "#c3c6d7",
+                      "canvas-white": "#F9FAFB",
+                      "tertiary-fixed-dim": "#ffb596",
+                      "on-surface-variant": "#434655",
+                      "secondary-container": "#e4e1e6",
+                      "surface-container": "#ededf9",
+                      "primary": "#004ac6",
+                      "on-error": "#ffffff",
+                      "on-tertiary-fixed": "#360f00",
+                      "on-primary-fixed": "#00174b",
+                      "tertiary-container": "#bc4800",
+                      "muted-steel": "#71717A",
+                      "background": "#faf8ff",
+                      "error": "#ba1a1a",
+                      "primary-fixed-dim": "#b4c5ff",
+                      "inverse-on-surface": "#f0f0fb",
+                      "inverse-primary": "#b4c5ff",
+                      "on-tertiary-fixed-variant": "#7d2d00",
+                      "surface-tint": "#0053db",
+                      "on-secondary": "#ffffff",
+                      "tertiary": "#943700",
+                      "secondary": "#5f5e61",
+                      "surface-container-lowest": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "on-tertiary-container": "#ffede6",
+                      "on-background": "#191b23",
+                      "on-primary-fixed-variant": "#003ea8",
+                      "surface-variant": "#e1e2ed",
+                      "surface-container-low": "#f3f3fe",
+                      "pure-surface": "#FFFFFF",
+                      "inverse-surface": "#2e3039",
+                      "surface": "#faf8ff",
+                      "on-tertiary": "#ffffff",
+                      "primary-fixed": "#dbe1ff",
+                      "secondary-fixed": "#e4e1e6",
+                      "on-secondary-container": "#656467",
+                      "surface-container-highest": "#e1e2ed",
+                      "whisper-border": "rgba(226, 232, 240, 0.5)",
+                      "surface-bright": "#faf8ff",
+                      "on-surface": "#191b23",
+                      "outline": "#737686",
+                      "on-secondary-fixed-variant": "#47464a",
+                      "surface-container-high": "#e7e7f3",
+                      "on-primary-container": "#eeefff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-desktop": "2.5rem",
+                      "gutter": "1.5rem",
+                      "reading-column": "720px",
+                      "max-width": "1280px",
+                      "margin-mobile": "1rem"
+              },
+              "fontFamily": {
+                      "label-mono": ["JetBrains Mono"],
+                      "body-md": ["Plus Jakarta Sans"],
+                      "headline-xl": ["Plus Jakarta Sans"],
+                      "headline-lg": ["Plus Jakarta Sans"],
+                      "body-lg": ["Plus Jakarta Sans"],
+                      "headline-xl-mobile": ["Plus Jakarta Sans"],
+                      "headline-md": ["Plus Jakarta Sans"]
+              },
+              "fontSize": {
+                      "label-mono": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-xl": ["56px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-xl-mobile": ["40px", {"lineHeight": "1.1", "fontWeight": "700"}],
+                      "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+    </script>
+
+<meta name="description" content="Evidence-led reporting on science, space, climate, health, research, and discoveries changing what we know.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://newsfixd.com/science/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="NewsFixd">
+<meta property="og:title" content="Science, Climate & Discovery | NewsFixd">
+<meta property="og:description" content="Evidence-led reporting on science, space, climate, health, research, and discoveries changing what we know.">
+<meta property="og:url" content="https://newsfixd.com/science/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Science, Climate & Discovery | NewsFixd">
+<meta name="twitter:description" content="Evidence-led reporting on science, space, climate, health, research, and discoveries changing what we know.">
+<link rel="alternate" type="application/rss+xml" title="NewsFixd" href="https://newsfixd.com/feed.xml">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Science, Climate & Discovery | NewsFixd","description":"Evidence-led reporting on science, space, climate, health, research, and discoveries changing what we know.","url":"https://newsfixd.com/science/","isPartOf":{"@type":"WebSite","name":"NewsFixd","url":"https://newsfixd.com"}}</script>
+</head>
+<body class="bg-canvas-white text-on-background">
+<!-- TopNavBar -->
+<nav class="bg-canvas-white dark:bg-on-background fixed top-0 w-full z-50">
+<div class="flex justify-between items-center w-full px-margin-desktop py-6 max-w-max-width mx-auto">
+<div class="font-headline-md text-headline-md text-on-background dark:text-surface-bright tracking-tighter uppercase">
+                NewsFixd
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-body-md text-body-md text-muted-steel dark:text-outline-variant pb-1 hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="/global/">Global</a>
+<a class="font-body-md text-body-md text-muted-steel dark:text-outline-variant pb-1 hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="/politics/">Politics</a>
+<a class="font-body-md text-body-md text-muted-steel dark:text-outline-variant pb-1 hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="/tech/">Tech</a>
+<a class="font-body-md text-body-md text-muted-steel dark:text-outline-variant pb-1 hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="#">Culture</a>
+<a class="font-body-md text-body-md text-muted-steel dark:text-outline-variant pb-1 hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="/business/">Business</a>
+<a class="font-body-md text-body-md text-primary dark:text-primary-fixed border-b-2 border-primary pb-1 transition-colors duration-300" href="/science/">Science</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-background dark:text-surface-bright text-2xl">search</button>
+<button class="material-symbols-outlined text-on-background dark:text-surface-bright text-2xl">account_circle</button>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-20">
+<!-- Hero Feature: Asymmetric Layout -->
+<header class="px-margin-desktop max-w-max-width mx-auto mb-24">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-7 flex flex-col justify-end">
+<span class="font-label-mono text-label-mono text-primary mb-4 uppercase tracking-widest">Featured Report</span>
+<h1 class="font-headline-xl text-headline-xl tracking-tight-custom mb-6">The James Webb Legacy: Rewriting Cosmic History.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-8">Two years into its mission, the observatory is challenging fundamental models of the early universe, revealing galaxies that shouldn't exist.</p>
+<div class="flex items-center gap-4">
+<button class="bg-primary text-on-primary px-8 py-3 font-label-mono text-label-mono uppercase tracking-widest hover:scale-95 transition-transform duration-200">Read the Essay</button>
+<span class="font-label-mono text-label-mono text-muted-steel">12 MIN READ</span>
+</div>
+</div>
+<div class="md:col-span-5">
+<div class="relative h-[500px] w-full rounded-xl overflow-hidden group">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A high-resolution deep space photograph captured by a telescope, showing a vibrant nebula with swirls of cosmic dust in deep blues and violent purples. Sharp pinpoints of starlight and distant galaxies are scattered throughout the composition. The lighting is ethereal and majestic, fitting a high-end editorial science publication. The aesthetic is clean, sophisticated, and vast." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB0UHeCHBEAb5dUoldoKS3AU8961aBImfSErmcS451mbFmxax7W4H838aiKSw-pwSEZuKZWGABkEaYVaXs8p8PJ6GGHqZ7eVrikSG7Yf54R3FZ4c9l8VrwWDH3ct_Oh0s0yjRfh6MEVPlQ3xkCFZ4Z8wLwHw5BdUtWfQAKgvxBc65aw8wgqig0t1Q1MixHGqlkhUp9I6IVy9T_2zyOQKjcLe2Q25p5HbOaVf2IpyPKChZjvvK2nSjvx')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+</div>
+</div>
+</div>
+</header>
+<!-- The Lab Report: Bento Grid Section -->
+<section class="bg-surface-container-low py-24">
+<div class="px-margin-desktop max-w-max-width mx-auto">
+<div class="flex justify-between items-end mb-12 border-b border-whisper-border pb-6">
+<div>
+<h2 class="font-headline-lg text-headline-lg tracking-tight-custom">The Lab Report</h2>
+<p class="font-body-md text-body-md text-muted-steel mt-2">Dispatches from the world's most innovative research facilities.</p>
+</div>
+<a class="font-label-mono text-label-mono text-primary flex items-center gap-2 hover:translate-x-1 transition-transform" href="#">
+                        BROWSE ALL ARCHIVES <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<!-- Large Feature -->
+<div class="md:col-span-2 md:row-span-2 bg-pure-surface border border-whisper-border rounded-xl p-8 hover:shadow-lg transition-all duration-300 group">
+<div class="mb-6 overflow-hidden rounded-lg aspect-[4/3]">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="A macro photography shot of a high-tech laboratory petri dish containing glowing, bio-luminescent cellular structures in shades of electric blue and teal. The lighting is clinical yet artistic, casting soft shadows on a polished stainless steel surface. The mood is one of discovery and cutting-edge biological research in a pristine, modern environment." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBGAajeIDOSRzbf0jQ7-sKppyuBZ5jZ8iN1E1jlXabOKcjzQO8nc6R5FDQD0ddxMwzEMqjcMHvh2dzDYwpiTn6zlITEZGUYA27v2u4sn3MHAAdTg4SYypANNH1pkElHTeyHrCp4FW7YP506SQI4sqgIHsT4pGjl7QLDep9_o76oNwKvruMLO2G27AE3MWAV2xqYTkphB28TCuOzeTBkajTH5OJEekLYkOxxb34JHZ84xmWbaVb_X8-j')">
+</div>
+</div>
+<span class="font-label-mono text-label-mono text-primary mb-3 block">BIOTECH</span>
+<h3 class="font-headline-md text-headline-md mb-4">CRISPR 3.0: Precision gene editing enters clinical trials for rare genetic disorders.</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">A breakthrough in delivery mechanisms allows for systemic treatments previously thought impossible.</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-variant" data-alt="A professional portrait of a female scientist with a serious but engaged expression, wearing a minimalist white lab coat. The lighting is soft and professional against a neutral, airy background." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC3FoYKR-6vAD0ag7oqE9ZsekVfuswWde8wc81baPnbIdiiqAhik4ZH6jHuSxdvU1uiOzxxoYye5e5KZN1vg-bQYH5jZKX7PqwviismSAvsG8k9IBZ1eopvCXADkKHb66XYg2f-8OC2J72EVlk_-4eLTH1UkqTzlAqDIxHcpMMOqNbjUYanqCOEusj9m-XpcTHGPRNoy-i7--w0c8Ypo0BYZMJIFwWmE0x-HdR4z2ugWtvuomNaZUzh')"></div>
+<span class="font-label-mono text-label-mono text-on-background">Dr. Elena Vance</span>
+</div>
+</div>
+<!-- Side Grid Items -->
+<div class="bg-pure-surface border border-whisper-border rounded-xl p-6 hover:shadow-lg transition-all duration-300">
+<span class="font-label-mono text-label-mono text-primary mb-3 block">PHYSICS</span>
+<h4 class="font-headline-md text-[20px] mb-3">Fusion milestones: Energy gain reported in UK tokamak.</h4>
+<p class="font-body-md text-[14px] text-muted-steel">Researchers achieve 5-second sustained plasma at record temperatures.</p>
+</div>
+<div class="bg-pure-surface border border-whisper-border rounded-xl p-6 hover:shadow-lg transition-all duration-300">
+<span class="font-label-mono text-label-mono text-primary mb-3 block">PALEONTOLOGY</span>
+<h4 class="font-headline-md text-[20px] mb-3">Ancient DNA: Recovering the genome of a lost species.</h4>
+<p class="font-body-md text-[14px] text-muted-steel">Cave sediment analysis reveals complete ecosystem profile from 200k years ago.</p>
+</div>
+<div class="md:col-span-2 bg-primary text-on-primary rounded-xl p-8 flex flex-col justify-between">
+<div>
+<span class="font-label-mono text-label-mono text-primary-fixed mb-4 block">SUBSCRIPTION ONLY</span>
+<h3 class="font-headline-md text-headline-md mb-4">The Quantum Leap: Weekly intelligence on the second quantum revolution.</h3>
+</div>
+<button class="border border-on-primary/30 py-3 px-6 font-label-mono text-label-mono hover:bg-on-primary hover:text-primary transition-colors">UNLOCK SPECIALIZED REPORTS</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Future Discoveries: Asymmetric Reading Section -->
+<section class="py-24 px-margin-desktop max-w-max-width mx-auto">
+<h2 class="font-label-mono text-label-mono text-muted-steel tracking-widest uppercase mb-16 text-center">Future Discoveries</h2>
+<div class="space-y-32">
+<!-- Row 1 -->
+<div class="flex flex-col md:flex-row items-center gap-16">
+<div class="w-full md:w-3/5 order-2 md:order-1">
+<div class="aspect-video rounded-xl overflow-hidden shadow-2xl">
+<div class="w-full h-full bg-cover bg-center" data-alt="An artist's concept of a terraformed Martian landscape with small, modular glass domes and patches of hardy green moss visible against the red soil. The sun is low on the horizon, creating a warm, golden-hour glow across the rocky terrain. The aesthetic is grounded and realistic, focusing on the technical challenges and quiet beauty of future planetary exploration." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB5ICbrBTyivVMuAReWv33kuIgFVMIem59R1FoizLBxnGVgWm8sOWIy7VWw0C3Qj2oLOofze1S2VkUoiczbnOKBua0aMOfoIr5PdvHLnE8kdFO7zXi3M7OMGrrjn14Od7m24d2QXF1X0lk334iISPgOuUo89dYOfuaqUxPKC47C06Bxvtmm13kCYe-27ibU33HTgPNQT6lN8DgRb6njXpcq83gvOH3VAyfel11M0L3agoJPtfZzY1eu')">
+</div>
+</div>
+</div>
+<div class="w-full md:w-2/5 order-1 md:order-2">
+<span class="font-label-mono text-label-mono text-primary mb-2 block">PLANETARY EXPLORATION</span>
+<h3 class="font-headline-lg text-headline-lg mb-6">Mars 2040: The roadmap to a permanent research station.</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Exploring the infrastructure, psychological challenges, and robotic precursors necessary for humanity's first multi-planetary outpost.</p>
+<a class="inline-block border-b border-on-background pb-1 font-label-mono text-label-mono hover:text-primary hover:border-primary transition-colors" href="#">THE FULL ROADMAP</a>
+</div>
+</div>
+<!-- Row 2 (Reversed) -->
+<div class="flex flex-col md:flex-row items-center gap-16">
+<div class="w-full md:w-2/5">
+<span class="font-label-mono text-label-mono text-primary mb-2 block">NEUROSCIENCE</span>
+<h3 class="font-headline-lg text-headline-lg mb-6">Mapping the Connectome: The final frontier of self.</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Can we simulate the human brain? New mapping techniques suggest we are closer to a digital twin than previously estimated by ethicists.</p>
+<a class="inline-block border-b border-on-background pb-1 font-label-mono text-label-mono hover:text-primary hover:border-primary transition-colors" href="#">READ THE ANALYSIS</a>
+</div>
+<div class="w-full md:w-3/5">
+<div class="aspect-video rounded-xl overflow-hidden shadow-2xl relative">
+<div class="w-full h-full bg-cover bg-center" data-alt="A detailed digital 3D visualization of the human brain's neural pathways, rendered as thousands of glowing, multicolored fiber-optic threads weaving through a translucent anatomical structure. The background is a dark, sophisticated charcoal grey. The lighting highlights the complexity and beauty of neural connections, evoking a sense of high-tech medical research and sophisticated data visualization." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCtjwZZsfSU50wRubGoHy_8-oC-q4HZuAf_mQoTsfYAsMVXxVQo-ANXTQltWlrYIomqR55mO2zLj8gin3u2Zcg26-EuvZX671819_-R230L4DFpPCBilgmXN0L_J1evdlVYOximh08z5Kxx6L4yCuAbTUOlEtJd7t_5XyJZEb0jv29js5hl0dCAgPE9gllUslzfyUakt9ZZgAZFH7gwhAiU868ebSvbAmKErAviQa3WhQLATH6s5wWl')">
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / Lab Update -->
+<section class="max-w-max-width mx-auto px-margin-desktop mb-24">
+<div class="bg-surface-container rounded-3xl p-12 md:p-20 text-center relative overflow-hidden">
+<div class="absolute -top-24 -left-24 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-24 -right-24 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+<div class="relative z-10 max-w-2xl mx-auto">
+<span class="material-symbols-outlined text-primary text-5xl mb-6">science</span>
+<h2 class="font-headline-lg text-headline-lg mb-6">Get the Lab Report in your inbox.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-10">Every Tuesday, we distill the week's most significant peer-reviewed papers into clear, actionable insights for the curious mind.</p>
+<form class="flex flex-col md:flex-row gap-4">
+<input class="flex-grow bg-pure-surface border-whisper-border rounded-lg px-6 py-4 font-body-md focus:ring-2 focus:ring-primary focus:border-transparent outline-none" placeholder="email@university.edu" type="email"/>
+<button class="bg-on-background text-on-primary px-10 py-4 rounded-lg font-label-mono text-label-mono hover:scale-95 transition-transform" type="submit">SUBSCRIBE</button>
+</form>
+<p class="font-label-mono text-[10px] text-muted-steel mt-6 uppercase">NO SPAM. JUST PURE EMPIRICAL DATA.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-inverse-surface border-t border-whisper-border dark:border-outline-variant w-full">
+<div class="w-full py-12 px-margin-desktop flex flex-col md:flex-row justify-between items-center max-w-max-width mx-auto">
+<div class="font-headline-md text-headline-md text-on-background dark:text-surface-bright mb-8 md:mb-0">
+                NewsFixd
+            </div>
+<div class="flex flex-wrap justify-center gap-8 mb-8 md:mb-0">
+<a class="font-label-mono text-label-mono text-muted-steel dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="/newsletter/">Newsletter</a>
+<a class="font-label-mono text-label-mono text-muted-steel dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="/about.html">About</a>
+<a class="font-label-mono text-label-mono text-muted-steel dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">Archive</a>
+<a class="font-label-mono text-label-mono text-muted-steel dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="/privacy.html">Privacy</a>
+<a class="font-label-mono text-label-mono text-muted-steel dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="/terms.html">Terms</a>
+</div>
+<div class="font-label-mono text-label-mono text-muted-steel dark:text-outline-variant opacity-80">
+                © 2024 NewsFixd. Editorial Integrity First.
+            </div>
+</div>
+</footer>
+<script>
+        // Micro-interaction for hover effects and scroll reveals
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    }
+                });
+            }, observerOptions);
+
+            // Apply staggered reveal to section elements
+            const revealElements = document.querySelectorAll('section, header');
+            revealElements.forEach(el => {
+                el.classList.add('transition-all', 'duration-700', 'ease-out', 'opacity-0', 'translate-y-10');
+                observer.observe(el);
+            });
+        });
+    </script>
+<script src="/site.js"></script>
+</body></html>

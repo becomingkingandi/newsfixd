@@ -1,109 +1,357 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AI Personas — NewsFixd</title>
-  <meta name="description" content="Maya earned $43K in 30 days on OnlyFans. No filming. No typing. No sleep. The full tech breakdown of how an AI persona runs a revenue stream on autopilot with Claude Code.">
-  <link rel="canonical" href="https://newsfixd.com/ai/">
-  <meta property="og:title" content="AI Personas — NewsFixd">
-  <meta property="og:description" content="Maya earned $43K in 30 days on OnlyFans. No filming. No typing. No sleep. The tech stack behind autonomous AI personas.">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="/styles.css">
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Technology & Innovation News | NewsFixd</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..900&family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .stagger-load {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .hover-lift {
+            transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.2s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px -10px rgba(0, 74, 198, 0.15);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface-variant": "#434655",
+                        "on-error-container": "#93000a",
+                        "surface-tint": "#0053db",
+                        "on-tertiary": "#ffffff",
+                        "surface-container": "#ededf9",
+                        "primary-fixed": "#dbe1ff",
+                        "on-secondary-container": "#656467",
+                        "on-error": "#ffffff",
+                        "primary": "#004ac6",
+                        "on-primary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "secondary": "#5f5e61",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "tertiary": "#943700",
+                        "on-tertiary-fixed": "#360f00",
+                        "background": "#faf8ff",
+                        "outline": "#737686",
+                        "inverse-on-surface": "#f0f0fb",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "tertiary-fixed": "#ffdbcd",
+                        "secondary-fixed-dim": "#c8c5ca",
+                        "on-primary-container": "#eeefff",
+                        "surface-variant": "#e1e2ed",
+                        "tertiary-container": "#bc4800",
+                        "error": "#ba1a1a",
+                        "on-secondary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "surface": "#faf8ff",
+                        "on-background": "#191b23",
+                        "pure-surface": "#FFFFFF",
+                        "on-tertiary-container": "#ffede6",
+                        "on-secondary-fixed": "#1b1b1e",
+                        "surface-dim": "#d9d9e5",
+                        "secondary-fixed": "#e4e1e6",
+                        "surface-container-high": "#e7e7f3",
+                        "secondary-container": "#e4e1e6",
+                        "muted-steel": "#71717A",
+                        "on-primary-fixed": "#00174b",
+                        "inverse-primary": "#b4c5ff",
+                        "primary-container": "#2563eb",
+                        "canvas-white": "#F9FAFB",
+                        "surface-container-low": "#f3f3fe",
+                        "outline-variant": "#c3c6d7",
+                        "on-secondary-fixed-variant": "#47464a",
+                        "on-surface": "#191b23",
+                        "surface-container-highest": "#e1e2ed",
+                        "inverse-surface": "#2e3039",
+                        "whisper-border": "rgba(226, 232, 240, 0.5)",
+                        "surface-bright": "#faf8ff",
+                        "on-tertiary-fixed-variant": "#7d2d00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "2.5rem",
+                        "margin-mobile": "1rem",
+                        "max-width": "1280px",
+                        "gutter": "1.5rem",
+                        "reading-column": "720px"
+                    },
+                    "fontFamily": {
+                        "label-mono": ["JetBrains Mono"],
+                        "headline-xl": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "headline-xl-mobile": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "label-mono": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "headline-xl": ["56px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-xl-mobile": ["40px", {"lineHeight": "1.1", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+
+<meta name="description" content="Technology reporting and analysis covering artificial intelligence, startups, security, products, and digital culture.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://newsfixd.com/tech/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="NewsFixd">
+<meta property="og:title" content="Technology & Innovation News | NewsFixd">
+<meta property="og:description" content="Technology reporting and analysis covering artificial intelligence, startups, security, products, and digital culture.">
+<meta property="og:url" content="https://newsfixd.com/tech/">
+<meta property="og:image" content="https://lh3.googleusercontent.com/aida-public/AB6AXuCoKOymOf1x_hodeQOyhr6qDapi7YTNUOwYM8tIG-v8jLHPAuY5AnvWdKZxx79qE1oq1q_MhSTFUQvluONZNf13jHWk84nk9pyhIpfRLdqIK6QJ43cNaAzWo5V_GatGO3BLeYTdtJ8NOsqq_mqu76JRwWLRQY1kOd08qMbEgbBYug4ne7wLDNJb_gF1W5jam9EQIbbt0v9cUm6UdhPmlxdHT1yGIh_1x6qywXowJobWcPTyoxkHQM9l">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Technology & Innovation News | NewsFixd">
+<meta name="twitter:description" content="Technology reporting and analysis covering artificial intelligence, startups, security, products, and digital culture.">
+<meta name="twitter:image" content="https://lh3.googleusercontent.com/aida-public/AB6AXuCoKOymOf1x_hodeQOyhr6qDapi7YTNUOwYM8tIG-v8jLHPAuY5AnvWdKZxx79qE1oq1q_MhSTFUQvluONZNf13jHWk84nk9pyhIpfRLdqIK6QJ43cNaAzWo5V_GatGO3BLeYTdtJ8NOsqq_mqu76JRwWLRQY1kOd08qMbEgbBYug4ne7wLDNJb_gF1W5jam9EQIbbt0v9cUm6UdhPmlxdHT1yGIh_1x6qywXowJobWcPTyoxkHQM9l">
+<link rel="alternate" type="application/rss+xml" title="NewsFixd" href="https://newsfixd.com/feed.xml">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Technology & Innovation News | NewsFixd","description":"Technology reporting and analysis covering artificial intelligence, startups, security, products, and digital culture.","url":"https://newsfixd.com/tech/","isPartOf":{"@type":"WebSite","name":"NewsFixd","url":"https://newsfixd.com"}}</script>
 </head>
-<body>
-  <div class="shell">
-    <header class="topbar">
-      <div class="wrap">
-        <div class="brand">NewsFixd<small>ai personas · money · tax</small></div>
-        <nav class="nav">
-          <a href="../index.html">Home</a>
-          <a href="../index.html#latest">Latest</a>
-          <a href="../index.html#newsletter">Subscribe</a>
-        </nav>
-      </div>
-    </header>
-    <main class="wrap">
-      <section class="hero">
-        <p class="eyebrow">Autonomous income</p>
-        <h1>Maya doesn't exist. She earned $43K.</h1>
-        <p class="lede">Maya is 22 years old, a UCF psychology dropout, 1,247 paying subscribers, $34 average revenue per fan. Her top fan spent $1,847 in messages last month. She does not sleep. There is nothing to film. There is no one to type. Claude Code writes every message, manages every conversation, and never takes a day off. She is the most profitable employee on earth — because she isn't real.</p>
-        <div class="heroActions">
-          <a class="button primary" href="#breakdown">How it works</a>
-          <a class="button" href="../money/">The money</a>
-        </div>
-      </section>
+<body class="bg-background text-on-background selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Top Navigation Bar -->
+<header class="bg-background/80 backdrop-blur-md w-full sticky top-0 z-50">
+<div class="flex justify-between items-center max-w-max-width mx-auto px-margin-desktop py-6">
+<div class="flex items-center gap-8">
+<a class="font-headline-md text-headline-md font-bold text-on-background" href="/">NewsFixd</a>
+<nav class="hidden md:flex items-center gap-6">
+<a class="font-body-md text-body-md text-muted-steel hover:text-primary transition-colors duration-200" href="/politics/">Politics</a>
+<a class="font-body-md text-body-md text-primary border-b-2 border-primary pb-1" href="/tech/">Tech</a>
+<a class="font-body-md text-body-md text-muted-steel hover:text-primary transition-colors duration-200" href="#">Culture</a>
+<a class="font-body-md text-body-md text-muted-steel hover:text-primary transition-colors duration-200" href="/science/">Science</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-muted-steel">search</span>
+<input class="bg-surface-container-low border-none rounded-full py-2 pl-10 pr-4 w-64 focus:ring-2 focus:ring-primary/20 font-body-md text-body-md" placeholder="Search news..." type="text"/>
+</div>
+<button class="flex items-center justify-center p-2 rounded-full hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant">account_circle</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-12">
+<!-- Page Title & Header -->
+<header class="mb-12 stagger-load" style="animation-delay: 0.1s;">
+<div class="inline-block border border-primary text-primary font-label-mono text-label-mono px-3 py-1 rounded-full mb-4">CATEGORY: INNOVATION</div>
+<h1 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl mb-4">Technology & Innovation</h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-reading-column">Reporting on the edge of human progress, from quantum supremacy to the ethical frontiers of artificial intelligence.</p>
+</header>
+<!-- Feature Layout: The Quantum Leap (2-Column Feature) -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-20 stagger-load" style="animation-delay: 0.2s;">
+<div class="md:col-span-8 group cursor-pointer">
+<div class="relative overflow-hidden rounded-xl aspect-[16/9] mb-6">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A high-concept, cinematic photograph of a futuristic quantum computer processor glowing with ethereal blue and cyan light in a dark, hyper-clean laboratory. The lighting is dramatic and precise, highlighting the complex crystalline structures of the hardware. The overall aesthetic is cold, sophisticated, and technologically advanced, fitting a high-end editorial tech magazine." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoKOymOf1x_hodeQOyhr6qDapi7YTNUOwYM8tIG-v8jLHPAuY5AnvWdKZxx79qE1oq1q_MhSTFUQvluONZNf13jHWk84nk9pyhIpfRLdqIK6QJ43cNaAzWo5V_GatGO3BLeYTdtJ8NOsqq_mqu76JRwWLRQY1kOd08qMbEgbBYug4ne7wLDNJb_gF1W5jam9EQIbbt0v9cUm6UdhPmlxdHT1yGIh_1x6qywXowJobWcPTyoxkHQM9l"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<span class="font-label-mono text-label-mono text-primary bg-primary-fixed/30 px-2 py-1 rounded">BREAKTHROUGH</span>
+<span class="font-label-mono text-label-mono text-muted-steel">04 NOV 2024 · 12 MIN READ</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg group-hover:text-primary transition-colors duration-300">The Quantum Leap: Decoding the First Stable Qubit Interlink</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">Researchers have finally bridged the gap between theoretical stability and physical execution, marking the most significant shift in computing power since the invention of the transistor. This breakthrough could redefine everything from cryptography to pharmaceutical research within the decade.</p>
+<div class="flex items-center gap-2 pt-2">
+<div class="w-10 h-10 rounded-full bg-surface-container-high border border-whisper-border overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close up portrait of a professional science journalist, a woman in her late 30s with short hair and glasses, looking thoughtful against a soft-focus office background. The lighting is warm and natural, creating a trustworthy and intellectual appearance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCo6oPBVDU0vtSdZ6tYQaDgP-uKBzIRhIpYuMbHJK6fh2ARDwlCtk_hijstHs3D8tx5kzwkzIAqQKlgVmjy-ckVKe75NO4vlzHxQASP9rp8WSwtOhofVpDOlsXgMBszt6x544VOXW8F1GkUhwI63fiDEdFIGEI7KJ_VIfOoIECpaKRRaQyFooL-6UZQBRm5AE1Yx0RqoKcu-vceQXDO1oCQNUkAiO_QwVnN3ldFbAYnMz-myUwJ7ZS4"/>
+</div>
+<span class="font-body-md text-body-md font-semibold">Elena Vance</span>
+</div>
+</div>
+</div>
+<aside class="md:col-span-4 flex flex-col gap-8">
+<div class="border-l-2 border-primary pl-6 space-y-4 hover:translate-x-1 transition-transform duration-300 cursor-pointer">
+<span class="font-label-mono text-label-mono text-muted-steel">TRENDING NOW</span>
+<h3 class="font-headline-md text-headline-md leading-tight">Neural Interfaces: The End of Keyboard Inputs?</h3>
+<p class="font-body-md text-body-md text-secondary line-clamp-2">Direct brain-to-computer communication just passed clinical trials for non-therapeutic use cases.</p>
+</div>
+<div class="border-l-2 border-whisper-border pl-6 space-y-4 hover:translate-x-1 transition-transform duration-300 cursor-pointer">
+<span class="font-label-mono text-label-mono text-muted-steel">POLICY</span>
+<h3 class="font-headline-md text-headline-md leading-tight">The EU AI Act: Three Months After Implementation</h3>
+<p class="font-body-md text-body-md text-secondary line-clamp-2">How startups are navigating the world's first comprehensive regulatory framework for LLMs.</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl border border-whisper-border">
+<h4 class="font-label-mono text-label-mono font-bold mb-4">NEWSFIXD INSIGHT</h4>
+<p class="font-body-md text-body-md text-on-surface italic">"The speed of innovation is no longer limited by hardware, but by our ability to govern the data that feeds it."</p>
+</div>
+</aside>
+</section>
+<!-- Asymmetric Grid for Other Tech Stories -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-20">
+<!-- Grid Item 1: Wide Card -->
+<div class="md:col-span-2 group cursor-pointer stagger-load" style="animation-delay: 0.3s;">
+<div class="flex flex-col md:flex-row gap-6 bg-pure-surface rounded-xl p-4 border border-whisper-border hover-lift">
+<div class="md:w-1/2 overflow-hidden rounded-lg aspect-square md:aspect-auto">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A macro photograph of sustainable semi-conductors made from organic materials, showing intricate vein-like patterns glowing with warm amber light. The composition is artistic and minimalist, emphasizing the fusion of nature and technology. Soft depth of field with a clean, gallery-like lighting setup." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGr8AM3HKJG9C5X16zV--saUjAjQBrRFHgaoJaAGIw09cj5So7ZLLbBfcUJeIMmrS-A9ovT5L-sFX_s1IebUQY1i_cGvImtN49RhIizyqjC94dWrdibp3WKvHCNigjkxl6uj3YJpO4fWNT6U2bvN_lEHV77i7HaDDFVVHatw1p55KZu1n9j4bG94ZldpHVA28q40aKsIDvYX5D9f3uMQgUoTF9sI6lByUxTUAD5pqhgWyI5AozuXdh"/>
+</div>
+<div class="md:w-1/2 flex flex-col justify-center space-y-3 pr-4">
+<div class="flex gap-2">
+<span class="border border-secondary/30 text-secondary font-label-mono text-label-mono px-2 py-0.5 rounded-full">Sustainability</span>
+</div>
+<h3 class="font-headline-md text-headline-md leading-snug">Organic Silicon: The Future of Green Chips</h3>
+<p class="font-body-md text-body-md text-secondary">A new class of biodegradable semiconductors promises to solve the global e-waste crisis while matching traditional performance.</p>
+<span class="font-label-mono text-label-mono text-muted-steel pt-4">03 NOV 2024</span>
+</div>
+</div>
+</div>
+<!-- Grid Item 2: Tall Card -->
+<div class="md:col-span-1 group cursor-pointer stagger-load" style="animation-delay: 0.4s;">
+<div class="h-full flex flex-col bg-pure-surface border border-whisper-border rounded-xl p-6 hover-lift">
+<div class="aspect-[3/4] overflow-hidden rounded-lg mb-6">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="An atmospheric, low-angle shot of a minimalist data center with tall, sleek black server racks illuminated by rhythmic, pulsing neon white light strips. The floor is polished concrete reflecting the lights. The space looks vast, silent, and powerful. Ultra-modern editorial style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBY9FXCVlN0nDqvweXE6-x84aDc9mJicAdYAbTBP4b1HwPCKItyfbxai4iQvlP04vr6vgyz6CqbzOauxqehh26O53q565pU4DIXcnQOKaPE4_KKQ2zRTp6AWbmn3rYxY_3csuu9G8_8WDQgl_KcBLgG45IkRIyQncGH-q9FRF_tuzEhFranB-v3_fbSi81ZT2oLnbTq5DShp8cT2rYuKx5z8V3au8aL6fNjm7XvuuYO71jjmsu1VGgr"/>
+</div>
+<div class="mt-auto space-y-3">
+<div class="flex gap-2">
+<span class="border border-secondary/30 text-secondary font-label-mono text-label-mono px-2 py-0.5 rounded-full">Infrastructure</span>
+</div>
+<h3 class="font-headline-md text-headline-md leading-tight">Decentralizing the Cloud</h3>
+<p class="font-body-md text-body-md text-secondary line-clamp-3">Edge computing and peer-to-peer protocols are challenging the dominance of big tech data silos.</p>
+<span class="font-label-mono text-label-mono text-muted-steel block pt-2">02 NOV 2024</span>
+</div>
+</div>
+</div>
+<!-- Grid Item 3: Standard Card -->
+<div class="group cursor-pointer stagger-load" style="animation-delay: 0.5s;">
+<div class="space-y-4">
+<div class="aspect-video overflow-hidden rounded-xl">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A clean, minimalist 3D render of a futuristic smartphone with a translucent screen showing complex data visualizations in soft pastel colors. The phone is floating in a void of pure white space with soft ambient occlusion shadows. Sophisticated, high-key lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBo5HbL4UvuuWQzKmYsS4UeJ5dmtV59V8K4OlqZv8ej7zqtG9kHusJgAws7z0dzj_l6EdEEAUU5oSVINem72Mgd6KW8Q8OMHh9bWkQe7TPHXweSsiVEYrgk_wDxT6Dghy8lDteGb49W7B8R0CD4KHldsGQpU0nGo8-Is4UQ4nLnbqnkAzmHV25ufNbbj3BogIcF6YceXFuzwgA5LvqbDcB1IG0LPRmpThrbM3zapExiMKlZ57XOO5Kj"/>
+</div>
+<div class="flex gap-2">
+<span class="border border-secondary/30 text-secondary font-label-mono text-label-mono px-2 py-0.5 rounded-full">Gadgets</span>
+</div>
+<h3 class="font-headline-md text-headline-md leading-tight group-hover:text-primary transition-colors">The Folding Glass Era</h3>
+<p class="font-body-md text-body-md text-secondary line-clamp-2">How material science finally caught up with our desire for flexible displays.</p>
+<span class="font-label-mono text-label-mono text-muted-steel block">02 NOV 2024</span>
+</div>
+</div>
+<!-- Grid Item 4: Standard Card -->
+<div class="group cursor-pointer stagger-load" style="animation-delay: 0.6s;">
+<div class="space-y-4">
+<div class="aspect-video overflow-hidden rounded-xl">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A high-contrast black and white photograph of an autonomous drone swarm performing a coordinated light show in a night sky. The drones appear as bright streaks of white light against a pitch-black background. Artistic, dramatic, and slightly eerie." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_QYP26v-QpS2AYNveBjtOqPAeAEYSjuY8K6YwoFnMy9ug7xc4PLWmqhlfDnm3bSTS5V2GsUe7xoy9vpBRXhk6dXAiZP-zizVl264dL2PwtJQa6ey0Ih_nDsoFrKGqvZRRHHpR8i7zvsOdrR5ZVvoOZ-elTIFzt4LvvpqX_bc0RJv17KYn2g005lR41NC7ew38GgVnALbp6Lh4uVWKGgwBnUxPD-uC81vjfW7kBqE8H0ISUL7cQF_m"/>
+</div>
+<div class="flex gap-2">
+<span class="border border-secondary/30 text-secondary font-label-mono text-label-mono px-2 py-0.5 rounded-full">Robotics</span>
+</div>
+<h3 class="font-headline-md text-headline-md leading-tight group-hover:text-primary transition-colors">Swarm Intelligence in Logistics</h3>
+<p class="font-body-md text-body-md text-secondary line-clamp-2">Small-scale robots are outperforming heavy machinery in the world's largest shipping ports.</p>
+<span class="font-label-mono text-label-mono text-muted-steel block">01 NOV 2024</span>
+</div>
+</div>
+<!-- Grid Item 5: Small Bento Card -->
+<div class="group cursor-pointer bg-primary p-8 rounded-xl flex flex-col justify-between text-on-primary stagger-load" style="animation-delay: 0.7s;">
+<div class="space-y-4">
+<span class="font-label-mono text-label-mono opacity-80 uppercase tracking-widest">Subscriber Exclusive</span>
+<h3 class="font-headline-md text-headline-md leading-tight text-on-primary-container">The Silicon Valley Exodus Report 2024</h3>
+<p class="font-body-md text-body-md opacity-90">Where the best engineers are moving, and why it matters for the next decade of tech IPOs.</p>
+</div>
+<div class="flex items-center gap-2 group-hover:gap-4 transition-all pt-8">
+<span class="font-body-md font-bold">Read the report</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</div>
+</div>
+</section>
+<!-- Newsletter Section -->
+<section class="bg-surface-container-low rounded-2xl p-8 md:p-16 mb-20 text-center stagger-load" style="animation-delay: 0.8s;">
+<div class="max-w-reading-column mx-auto">
+<span class="font-label-mono text-label-mono text-primary mb-4 block">STAY AHEAD</span>
+<h2 class="font-headline-lg text-headline-lg mb-6">The Future, Delivered Weekly</h2>
+<p class="font-body-lg text-body-lg text-secondary mb-10">Join 150,000+ innovators who receive our curated briefing on the technologies reshaping our world.</p>
+<form class="flex flex-col sm:flex-row gap-4">
+<input class="flex-grow bg-pure-surface border border-whisper-border px-6 py-4 rounded-lg focus:ring-2 focus:ring-primary/20 outline-none font-body-md" placeholder="Enter your work email" type="email"/>
+<button class="bg-primary text-on-primary px-10 py-4 rounded-lg font-body-md font-bold hover:bg-surface-tint active:scale-95 transition-all">Subscribe Now</button>
+</form>
+<p class="font-label-mono text-label-mono text-muted-steel mt-6">Zero spam. Pure insight. Unsubscribe anytime.</p>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-background w-full py-12 border-t border-whisper-border">
+<div class="max-w-reading-column mx-auto flex flex-col items-center gap-6 text-center">
+<a class="text-on-surface-variant font-bold font-headline-md text-headline-md" href="/">NewsFixd</a>
+<nav class="flex flex-wrap justify-center gap-8">
+<a class="font-label-mono text-label-mono text-muted-steel hover:text-primary underline decoration-primary transition-colors" href="/about.html">About</a>
+<a class="font-label-mono text-label-mono text-muted-steel hover:text-primary underline decoration-primary transition-colors" href="/privacy.html">Privacy</a>
+<a class="font-label-mono text-label-mono text-muted-steel hover:text-primary underline decoration-primary transition-colors" href="/terms.html">Terms</a>
+<a class="font-label-mono text-label-mono text-muted-steel hover:text-primary underline decoration-primary transition-colors" href="/feed.xml">RSS</a>
+</nav>
+<p class="font-label-mono text-label-mono text-muted-steel opacity-80 mt-4">© 2024 NewsFixd. Editorial Clarity.</p>
+</div>
+</footer>
+<!-- Side Navigation (Suppressed for this layout per rules, but included if needed for global context) -->
+<!-- Note: TopAppBar is the primary navigation for this Web layout as per Design System rules -->
+<script>
+        // Micro-interaction for scroll reveals
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
 
-      <section class="grid" id="breakdown">
-        <article class="card cardPad">
-          <p class="eyebrow">Tech stack</p>
-          <div class="list">
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
 
-            <div class="item">
-              <h3>1. The persona layer</h3>
-              <p>A generated identity with a name, backstory, photos, and voice. Maya was built with Stable Diffusion for visuals, ElevenLabs for voice, and a personality profile written to optimize subscriber retention. No real person was photographed or recorded.</p>
-            </div>
+            document.querySelectorAll('.stagger-load').forEach(el => {
+                observer.observe(el);
+            });
+        });
 
-            <div class="item">
-              <h3>2. The chat engine (Claude Code)</h3>
-              <p>Every DM, every reply, every subscription thank-you is written by Claude Code. The system maintains consistent personality, remembers past conversations, and escalates high-spending fans to premium content flows. It never gets tired, never gets rude, never makes a typo.</p>
-            </div>
-
-            <div class="item">
-              <h3>3. The revenue loop</h3>
-              <p>$34/fan/month average. Top 10% of fans generate 67% of revenue. The system detects high-intent spenders within 48 hours and routes them to premium tiers automatically. No human touches the funnel until the money hits the bank.</p>
-            </div>
-
-            <div class="item">
-              <h3>4. Scaling to 10 Mayas</h3>
-              <p>One operator can run multiple AI personas simultaneously. Each persona has a different niche, look, and personality. The marginal cost of persona #10 is near zero — just compute and API credits. $43K/mo × 10 personas = $430K/mo with the same team size.</p>
-            </div>
-          </div>
-        </article>
-        <aside class="stack">
-          <div class="card cardPad">
-            <p class="eyebrow">Key numbers</p>
-            <div class="list">
-              <div class="item">
-                <h3>$43,000</h3>
-                <p>Gross revenue in 30 days — first account, no track record.</p>
-              </div>
-              <div class="item">
-                <h3>$34</h3>
-                <p>Average revenue per subscriber per month.</p>
-              </div>
-              <div class="item">
-                <h3>$1,847</h3>
-                <p>What the top-spending fan paid in a single month.</p>
-              </div>
-              <div class="item">
-                <h3>1,247</h3>
-                <p>Paying subscribers acquired without ads — all organic discovery.</p>
-              </div>
-            </div>
-          </div>
-          <div class="card cardPad">
-            <p class="eyebrow">Tools</p>
-            <div class="slot" style="min-height:120px">Affiliate: AI avatar generators, Claude API, hosting, VPS for persona management</div>
-          </div>
-        </aside>
-      </section>
-
-      <section class="section newsletter-section">
-        <div class="newsletter-box">
-          <form class="subscribe-form" action="/api/subscribe" method="POST">
-            <input type="email" name="email" placeholder="your@email.com" required class="subscribe-input">
-            <input type="hidden" name="source" value="newsfixd-ai">
-            <button type="submit" class="button primary subscribe-btn">Subscribe</button>
-          </form>
-          <p class="subscribe-note">One email a week. Break downs, strategies, builds.</p>
-        </div>
-      </section>
-    </main>
-    <footer class="footer wrap">
-      <p>NewsFixd breaks down AI personas, autonomous income streams, and the tax strategies that keep the government out of your revenue.</p>
-    </footer>
-  </div>
-</body>
-</html>
+        // Simple active state logic for navigation
+        const navLinks = document.querySelectorAll('nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                navLinks.forEach(l => l.classList.remove('text-primary', 'border-b-2', 'border-primary', 'pb-1'));
+                navLinks.forEach(l => l.classList.add('text-muted-steel'));
+                link.classList.remove('text-muted-steel');
+                link.classList.add('text-primary', 'border-b-2', 'border-primary', 'pb-1');
+            });
+        });
+    </script>
+<script src="/site.js"></script>
+</body></html>

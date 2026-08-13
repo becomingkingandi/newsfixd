@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Weekend Fix Newsletter | NewsFixd</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..900&family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .reading-column {
+            max-width: 720px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .asymmetric-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 1.5rem;
+        }
+        .fade-in {
+            animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .stagger-1 { animation-delay: 0.1s; }
+        .stagger-2 { animation-delay: 0.2s; }
+        .stagger-3 { animation-delay: 0.3s; }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-container": "#bc4800",
+                    "canvas-white": "#F9FAFB",
+                    "surface": "#faf8ff",
+                    "on-error": "#ffffff",
+                    "secondary-fixed-dim": "#c8c5ca",
+                    "primary-fixed-dim": "#b4c5ff",
+                    "muted-steel": "#71717A",
+                    "primary-fixed": "#dbe1ff",
+                    "surface-container-highest": "#e1e2ed",
+                    "inverse-surface": "#2e3039",
+                    "on-error-container": "#93000a",
+                    "inverse-primary": "#b4c5ff",
+                    "on-surface-variant": "#434655",
+                    "on-primary-fixed": "#00174b",
+                    "on-secondary-fixed-variant": "#47464a",
+                    "on-tertiary": "#ffffff",
+                    "secondary-fixed": "#e4e1e6",
+                    "secondary": "#5f5e61",
+                    "tertiary-fixed-dim": "#ffb596",
+                    "surface-bright": "#faf8ff",
+                    "on-background": "#191b23",
+                    "inverse-on-surface": "#f0f0fb",
+                    "tertiary": "#943700",
+                    "on-primary-fixed-variant": "#003ea8",
+                    "primary-container": "#2563eb",
+                    "outline-variant": "#c3c6d7",
+                    "on-secondary": "#ffffff",
+                    "surface-container": "#ededf9",
+                    "on-secondary-container": "#656467",
+                    "on-surface": "#191b23",
+                    "whisper-border": "rgba(226, 232, 240, 0.5)",
+                    "pure-surface": "#FFFFFF",
+                    "on-primary": "#ffffff",
+                    "on-secondary-fixed": "#1b1b1e",
+                    "surface-container-low": "#f3f3fe",
+                    "surface-container-high": "#e7e7f3",
+                    "error-container": "#ffdad6",
+                    "surface-tint": "#0053db",
+                    "on-tertiary-fixed": "#360f00",
+                    "surface-dim": "#d9d9e5",
+                    "on-primary-container": "#eeefff",
+                    "primary": "#004ac6",
+                    "outline": "#737686",
+                    "on-tertiary-container": "#ffede6",
+                    "error": "#ba1a1a",
+                    "surface-variant": "#e1e2ed",
+                    "tertiary-fixed": "#ffdbcd",
+                    "on-tertiary-fixed-variant": "#7d2d00",
+                    "background": "#faf8ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "1rem",
+                    "margin-desktop": "2.5rem",
+                    "gutter": "1.5rem",
+                    "reading-column": "720px",
+                    "max-width": "1280px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "label-mono": ["JetBrains Mono"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "headline-xl-mobile": ["Plus Jakarta Sans"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "headline-xl": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-mono": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-xl-mobile": ["40px", {"lineHeight": "1.1", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-xl": ["56px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+
+<meta name="description" content="Subscribe to The Weekend Fix for a concise, thoughtful briefing on the stories and ideas worth your attention.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://newsfixd.com/newsletter/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="NewsFixd">
+<meta property="og:title" content="The Weekend Fix Newsletter | NewsFixd">
+<meta property="og:description" content="Subscribe to The Weekend Fix for a concise, thoughtful briefing on the stories and ideas worth your attention.">
+<meta property="og:url" content="https://newsfixd.com/newsletter/">
+<meta property="og:image" content="https://lh3.googleusercontent.com/aida-public/AB6AXuBZRQt9-JoM--NqmGaiUHRNQ8-oJRX_Nf4h3gkopkitJQUUrQYNV0WvBiXYlN75XheTDmQfv6vOMBGSYaH4arabJJj1WNPzXB45pR1W-kWuM_bGhgo-40nxu50UYsljJU0-4sv9iw_D2uk5mEzzys0ixzyDox6FgqpkhziNNBk6QJBfvby11QHKJ2DY2-H80yl4TdXNT2giDjK8lUvbOdUTCjg_ym4EWDAZ1aqx4AblcW9CnUP5nI9f">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Weekend Fix Newsletter | NewsFixd">
+<meta name="twitter:description" content="Subscribe to The Weekend Fix for a concise, thoughtful briefing on the stories and ideas worth your attention.">
+<meta name="twitter:image" content="https://lh3.googleusercontent.com/aida-public/AB6AXuBZRQt9-JoM--NqmGaiUHRNQ8-oJRX_Nf4h3gkopkitJQUUrQYNV0WvBiXYlN75XheTDmQfv6vOMBGSYaH4arabJJj1WNPzXB45pR1W-kWuM_bGhgo-40nxu50UYsljJU0-4sv9iw_D2uk5mEzzys0ixzyDox6FgqpkhziNNBk6QJBfvby11QHKJ2DY2-H80yl4TdXNT2giDjK8lUvbOdUTCjg_ym4EWDAZ1aqx4AblcW9CnUP5nI9f">
+<link rel="alternate" type="application/rss+xml" title="NewsFixd" href="https://newsfixd.com/feed.xml">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"The Weekend Fix Newsletter | NewsFixd","description":"Subscribe to The Weekend Fix for a concise, thoughtful briefing on the stories and ideas worth your attention.","url":"https://newsfixd.com/newsletter/","isPartOf":{"@type":"WebSite","name":"NewsFixd","url":"https://newsfixd.com"}}</script>
+</head>
+<body class="bg-canvas-white text-on-background font-body-md">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky z-50 bg-canvas-white dark:bg-on-background transition-all duration-300">
+<div class="max-w-max-width mx-auto px-margin-desktop flex items-center justify-between h-20">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-inverse-primary tracking-tight">
+                NewsFixd
+            </div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-body-md text-muted-steel dark:text-secondary-fixed-dim hover:text-primary transition-colors" href="/local/">Local</a>
+<a class="font-body-md text-muted-steel dark:text-secondary-fixed-dim hover:text-primary transition-colors" href="/global/">Global</a>
+<a class="font-body-md text-primary dark:text-inverse-primary border-b-2 border-primary pb-1" href="/newsletter/">Newsletters</a>
+<a class="font-body-md text-muted-steel dark:text-secondary-fixed-dim hover:text-primary transition-colors" href="/business/">Business</a>
+<a class="font-body-md text-muted-steel dark:text-secondary-fixed-dim hover:text-primary transition-colors" href="#">Culture</a>
+</nav>
+<div class="flex items-center gap-6 text-primary dark:text-inverse-primary">
+<span class="material-symbols-outlined cursor-pointer hover:opacity-80 transition-opacity">search</span>
+<span class="material-symbols-outlined cursor-pointer hover:opacity-80 transition-opacity">bookmark</span>
+<span class="material-symbols-outlined cursor-pointer hover:opacity-80 transition-opacity">account_circle</span>
+</div>
+</div>
+</header>
+<main class="min-h-screen pb-24">
+<!-- Hero Section / Curator Note -->
+<section class="reading-column px-margin-mobile pt-16 md:pt-24 fade-in">
+<div class="flex items-center gap-2 mb-8">
+<span class="font-label-mono text-label-mono text-primary uppercase tracking-widest px-3 py-1 border border-primary rounded-full">Weekly Edition</span>
+<span class="font-label-mono text-label-mono text-muted-steel">October 26, 2024</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl mb-12 tracking-tight">The Weekend Fix: Reclaiming Silence in a Loud World.</h1>
+<div class="flex items-center gap-4 mb-12">
+<div class="w-12 h-12 rounded-full bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A professional studio portrait of a sophisticated female editor in her late 40s. She has a warm, intelligent gaze and is wearing a dark charcoal turtleneck. The background is a clean, minimalist off-white, reflecting a gallery-like editorial aesthetic with soft, directional lighting that highlights her features naturally." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZRQt9-JoM--NqmGaiUHRNQ8-oJRX_Nf4h3gkopkitJQUUrQYNV0WvBiXYlN75XheTDmQfv6vOMBGSYaH4arabJJj1WNPzXB45pR1W-kWuM_bGhgo-40nxu50UYsljJU0-4sv9iw_D2uk5mEzzys0ixzyDox6FgqpkhziNNBk6QJBfvby11QHKJ2DY2-H80yl4TdXNT2giDjK8lUvbOdUTCjg_ym4EWDAZ1aqx4AblcW9CnUP5nI9f"/>
+</div>
+<div>
+<p class="font-body-md font-bold text-on-background">Elena Thorne</p>
+<p class="font-label-mono text-label-mono text-muted-steel uppercase">Executive Curator</p>
+</div>
+</div>
+<article class="prose prose-lg max-w-none text-on-surface-variant space-y-8">
+<p class="font-body-lg text-body-lg leading-relaxed">
+                    This week, we find ourselves at the intersection of technological acceleration and the human need for quietude. In our lead feature, we explore how the most innovative minds are intentionally seeking 'white space'—not just in their schedules, but in their digital environments.
+                </p>
+<p class="font-body-lg text-body-lg leading-relaxed">
+                    The modern world demands our attention as if it were a renewable resource. It isn't. As you navigate through this weekend's curated selection, I invite you to notice what resonates when the noise is stripped away. We've curated four essential pieces that challenge the status quo of modern productivity.
+                </p>
+</article>
+<div class="mt-16 p-8 bg-surface-container-low rounded-xl border border-whisper-border flex flex-col md:flex-row items-center justify-between gap-6">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-background">Stay in the loop.</h3>
+<p class="text-muted-steel font-body-md">The most important stories, curated for your weekend.</p>
+</div>
+<div class="flex w-full md:w-auto gap-2">
+<input class="bg-pure-surface border-b border-muted-steel px-4 py-2 focus:outline-none focus:border-primary transition-colors flex-grow md:w-64 font-label-mono" placeholder="Email address" type="email"/>
+<button class="bg-primary text-on-primary px-8 py-3 font-label-mono uppercase tracking-widest text-label-mono hover:opacity-90 active:scale-95 transition-all">Join</button>
+</div>
+</div>
+</section>
+<!-- Asymmetric Gallery: Past Editions -->
+<section class="max-w-max-width mx-auto px-margin-desktop mt-32">
+<div class="flex justify-between items-end mb-12">
+<h2 class="font-headline-lg text-headline-lg">Past Editions</h2>
+<a class="font-label-mono text-label-mono text-primary flex items-center gap-1 group" href="#">
+                    VIEW ARCHIVE <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="asymmetric-grid">
+<!-- Large Feature Card -->
+<div class="col-span-12 md:col-span-8 group cursor-pointer fade-in stagger-1">
+<div class="aspect-[16/7] w-full bg-surface-container overflow-hidden rounded-xl mb-6">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-700" data-alt="A wide, atmospheric landscape of a high-altitude mountain lake at twilight. The water is perfectly still, reflecting a deep indigo sky and a single bright star. The overall mood is one of profound silence and intellectual clarity, using a palette of charcoal, deep blue, and pristine white. The style is modern editorial with a cinematic quality." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDinFvrNcQk3rT4ix3TTs-0K7xJtaoIo23LNJDd7i6BISoO--9ckLMan31jq32E8gFRoTzK_FHakBjYjVLJKFPMwF0Ew1SIvMcXU68KoV6iBihLIILn2ZhO61ArwySshbYa-VPBfgkJ1jUkyBbCtvu9vFx3N5jHgV_taqlddROqWP2TRg83kl0W5MzzSerIqcoaugJqTI1oFJE7X_hqlxfGLkBuqgfHOTwpkU2ugXR_8fODhX3_cYtV')"></div>
+</div>
+<div class="flex items-center gap-3 mb-3">
+<span class="font-label-mono text-label-mono text-muted-steel uppercase">Edition #42</span>
+<span class="w-1 h-1 bg-muted-steel rounded-full"></span>
+<span class="font-label-mono text-label-mono text-muted-steel uppercase">Oct 19, 2024</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg group-hover:text-primary transition-colors mb-4">The Architecture of Stillness: Designing for Focus.</h3>
+<p class="font-body-md text-muted-steel line-clamp-2 max-w-2xl">How urban planners and interior designers are rethinking the spaces we inhabit to combat the mental fatigue of the digital age.</p>
+</div>
+<!-- Secondary Card 1 -->
+<div class="col-span-12 md:col-span-4 group cursor-pointer fade-in stagger-2">
+<div class="aspect-[4/5] w-full bg-surface-container overflow-hidden rounded-xl mb-6">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-700" data-alt="A minimalist architectural detail of a concrete spiral staircase in a modern art museum. Dramatic shadows and highlights create a strong geometric composition. The color palette is restricted to shades of grey, white, and a single subtle highlight of deep blue. The image evokes a sense of intellectual depth and structural precision." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBgl0WX7Z1P-18-E320jYIEmpNJ6J9anuotCv_5lHrJryfdR5soZcyaX-VtwE0GC5XKRtIlz3gF9OTawSTYhXxwpxm9yRc2CHzybJ_XVKJEo0FUhuMOrM-1rPvZ61YGrU7HcJiGyxMHdW2M7OKRAzcowp9DLcxeF5qwTfzb5mpLriIVqC5gx1c3Zh-FYHPjKjFxrGA9C31N5RpqW-znXb1r3mpfvkH29dwNk9IrfFVhuqHNxGNoyCBN')"></div>
+</div>
+<span class="font-label-mono text-label-mono text-muted-steel uppercase block mb-3">Edition #41</span>
+<h3 class="font-headline-md text-headline-md group-hover:text-primary transition-colors">The Algorithms of Choice.</h3>
+</div>
+<!-- Secondary Card 2 -->
+<div class="col-span-12 md:col-span-4 group cursor-pointer fade-in stagger-3">
+<div class="aspect-[4/5] w-full bg-surface-container overflow-hidden rounded-xl mb-6">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-700" data-alt="Close-up of a vintage mechanical typewriter on a pristine white oak desk. A single sheet of paper is partially inserted, with one bold sentence visible: 'Simplicity is the ultimate sophistication.' The lighting is soft and bright, emphasizing textures of metal and paper. Minimalist, sophisticated editorial style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBonRfcVvZk_oibD37mB3IGUhANYQYz8yRbRtyn7kzcVyeNb4iZK7uN97lxm4hfeLlLXJ0nxtMOzAxJoOWel84Fhmv_OcvVsDhQ7UYhgttGK6r6dP3aYXlFkNWaKHzNfldmItKilyYq4M473TjvTxelwCqiadtWgkUNevThNawYdnTTUoLjf-8kUN1tTb6Ex-f5DjdmCdshW8Q79gX8UN_dDqx7szZqWz3bdKct18LzYOVTcB5fiz3L')"></div>
+</div>
+<span class="font-label-mono text-label-mono text-muted-steel uppercase block mb-3">Edition #40</span>
+<h3 class="font-headline-md text-headline-md group-hover:text-primary transition-colors">Paper vs. Pixel: The Tactile Loop.</h3>
+</div>
+<!-- Secondary Card 3 - Spanning remaining space -->
+<div class="col-span-12 md:col-span-8 group cursor-pointer fade-in stagger-3">
+<div class="aspect-[16/7] w-full bg-surface-container overflow-hidden rounded-xl mb-6">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-700" data-alt="A futuristic but grounded laboratory setting where scientists are working with glowing organic plant structures. The lighting is bioluminescent green and soft blue, creating a serene, hopeful atmosphere. The composition is asymmetric and clean, highlighting the harmony between technology and nature in a gallery-inspired aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCbXmtbkKD0tTkrHe3qmPff9K_fUk4Ul3_22CWm8sIGpd-SPkzBMgopU_qi92QXLxI_He3qoqQJk41QMaUx2BfyxGuNanC2cfvYGylh12aFbuzt_n5GvNy5TAV64AvoThNAGlptIuH-3lM8hkGMAPrI0k8-c4JiVgtsONTDc1fhgW_CEHb12L12Uuo_1kuJKxjj65fvSIXVBXG0hu7a2ZeMqpmHQFyidQihzx8EdfnnoKG2HpbQWaE_')"></div>
+</div>
+<div class="flex items-center gap-3 mb-3">
+<span class="font-label-mono text-label-mono text-muted-steel uppercase">Edition #39</span>
+<span class="w-1 h-1 bg-muted-steel rounded-full"></span>
+<span class="font-label-mono text-label-mono text-muted-steel uppercase">Oct 05, 2024</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg group-hover:text-primary transition-colors mb-4">Symbiosis: The New Biological Frontier.</h3>
+<p class="font-body-md text-muted-steel line-clamp-2">Exploring the upcoming decade of synthetic biology and its implications for sustainable living and human health.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 w-full z-50 md:hidden bg-canvas-white dark:bg-on-background border-t border-whisper-border shadow-sm flex justify-around items-center h-16 px-margin-mobile">
+<div class="flex flex-col items-center justify-center text-muted-steel dark:text-secondary-fixed-dim">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-mono text-[10px] uppercase tracking-widest mt-1">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-muted-steel dark:text-secondary-fixed-dim">
+<span class="material-symbols-outlined">explore</span>
+<span class="font-label-mono text-[10px] uppercase tracking-widest mt-1">Discover</span>
+</div>
+<div class="flex flex-col items-center justify-center text-primary dark:text-inverse-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+<span class="font-label-mono text-[10px] uppercase tracking-widest mt-1">Saved</span>
+</div>
+<div class="flex flex-col items-center justify-center text-muted-steel dark:text-secondary-fixed-dim">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-mono text-[10px] uppercase tracking-widest mt-1">Profile</span>
+</div>
+</nav>
+<!-- Footer -->
+<footer class="w-full py-12 bg-canvas-white dark:bg-on-background border-t border-whisper-border">
+<div class="max-w-max-width mx-auto px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-gutter">
+<div class="font-headline-md text-headline-md font-bold text-primary">
+                NewsFixd
+            </div>
+<div class="flex gap-8">
+<a class="font-body-md text-muted-steel hover:text-primary transition-colors" href="/about.html">About</a>
+<a class="font-body-md text-muted-steel hover:text-primary transition-colors" href="/privacy.html">Privacy</a>
+<a class="font-body-md text-muted-steel hover:text-primary transition-colors" href="/terms.html">Terms</a>
+<a class="font-body-md text-muted-steel hover:text-primary transition-colors" href="#">Support</a>
+</div>
+<p class="font-body-md text-muted-steel">
+                © 2024 NewsFixd. Curated Editorial Excellence.
+            </p>
+</div>
+</footer>
+<script>
+        // Micro-interaction: Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-sm', 'bg-white/95', 'backdrop-blur-md');
+            } else {
+                header.classList.remove('shadow-sm', 'bg-white/95', 'backdrop-blur-md');
+            }
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.asymmetric-grid > div').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+<script src="/site.js"></script>
+</body></html>
