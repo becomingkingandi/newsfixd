@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /search/
+Disallow: /welcome/
+Disallow: /pipeline/
+Disallow: /api/
+
+Sitemap: https://newsfixd.com/sitemap.xml

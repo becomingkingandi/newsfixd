@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NewsFixd</title>
+    <link>https://newsfixd.com/</link>
+    <description>Independent perspectives on politics, technology, business, science, global affairs, and local communities.</description>
+    <language>en-us</language>
+    <atom:link href="https://newsfixd.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>The Silent Shift: How Generative Architecture is Redefining Urban Landscapes</title>
+      <link>https://newsfixd.com/article/</link>
+      <guid isPermaLink="true">https://newsfixd.com/article/</guid>
+      <description>How generative architecture is changing urban design, authorship, sustainability, and the cities people inhabit.</description>
+      <pubDate>Wed, 29 Jul 2026 12:00:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,9 @@
+.vercel
+
+# Local configuration, caches, and timestamped edit backups
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
+*.bak-*
