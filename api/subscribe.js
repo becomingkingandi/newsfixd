@@ -12,7 +12,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    const response = await fetch("https://api.knolyz.com/api/v1/public/leads", {
+    const response = await fetch("https://api.nyvolz.com/api/v1/public/leads", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
